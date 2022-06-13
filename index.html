@@ -15,6 +15,13 @@
   </head>
 
   <body>
+    <div class="mobile__attention">
+      <h1>Sorry</h1>
+      <p>We are working on mobile and adaptive version of AndrVi's official page.</p>
+      <p>Please stay tuned and go to this page on desktop!</p>
+      <img class="mobile__attention_image" src="https://media1.giphy.com/media/toXKzaJP3WIgM/giphy.gif?cid=790b7611484a5699a19a263bab6101cf0c307c45e76332fa&rid=giphy.gif&ct=g" alt="">
+    </div>
+
     <header class="navigation unselectable">
       <nav>
         <div class="container">
@@ -39,14 +46,14 @@
       </nav>
     </header>
 
-    <div id="home" class="hero unselectable pContent">
+    <div id="home" class="hero unselectable">
       <div class="hero__content">
         <div class="hero__title">
           <h1 translate="no">AndrVi</h1>
           <h3 translate="no">3D motion designer</h3>
         </div>
 
-        <video class="pImage" autoplay loop muted preload="auto" id="hero__video">
+        <video autoplay loop muted preload="auto" id="hero__video">
           <source src="./src/header/showreel_low.mp4" type="video/mp4" />
         </video>
 
@@ -172,14 +179,25 @@
       </div>
     </section>
 
+    <div class="work__background">
+      <div class="work__background_left">      
+        <img id="work__background_image2" src="./src/background/Page_BG_2.png" alt="backgroundImage">
+        <img id="work__background_image3" src="./src/background/Page_BG_3.png" alt="backgroundImage">
+      </div>
+
+      <img id="work__background_image1" src="./src/background/Page_BG_1.png" alt="backgroundImage">
+    </div>
+
     <div id="about" class="section__about">
       <div class="container">
         <div>
+
           <h2>Project timeline</h2>
-          <!-- <h3>7 steps to</h3> -->
           <div class="timeline__items">
             <div class="timeline__item">
               <span class="timeline__item_number unselectable">01</span>
+              <img class="timeline__item_imageMain unselectable" src="./src/background/Site_1_1.png" alt="">
+              <img class="timeline__item_imageAdd unselectable" src="./src/background/Site_1_2.png" alt="">
               <h3 class="h3_accentColor unselectable">Step 1</h3>
               <h4 class="unselectable">Art-direction</h4>
               <p class="unselectable">
@@ -189,6 +207,8 @@
 
             <div class="timeline__item">
               <span class="timeline__item_number unselectable">02</span>
+              <img class="timeline__item_imageMain unselectable" src="./src/background/Site_2_1.png" alt="">
+              <img class="timeline__item_imageAdd unselectable" src="./src/background/Site_2_2.png" alt="">
               <h3 class="h3_accentColor unselectable">Step 2</h3>
               <h4 class="unselectable">Blocking</h4>
               <p class="unselectable">
@@ -198,6 +218,8 @@
 
             <div class="timeline__item">
               <span class="timeline__item_number unselectable">03</span>
+              <img class="timeline__item_imageMain unselectable" src="./src/background/Site_3_1.png" alt="">
+              <img class="timeline__item_imageAdd unselectable" src="./src/background/Site_3_2.png" alt="">
               <h3 class="h3_accentColor unselectable">Step 3</h3>
               <h4 class="unselectable">Assets</h4>
               <p class="unselectable">
@@ -207,6 +229,8 @@
 
             <div class="timeline__item">
               <span class="timeline__item_number unselectable">04</span>
+              <img class="timeline__item_imageMain unselectable" src="./src/background/Site_4_1.png" alt="">
+              <img class="timeline__item_imageAdd unselectable" src="./src/background/Site_4_2.png" alt="">
               <h3 class="h3_accentColor unselectable">Step 4</h3>
               <h4 class="unselectable">Lookdeving</h4>
               <p class="unselectable">
@@ -216,6 +240,8 @@
 
             <div class="timeline__item">
               <span class="timeline__item_number unselectable">05</span>
+              <img class="timeline__item_imageMain unselectable" src="./src/background/Site_5_1.png" alt="">
+              <img class="timeline__item_imageAdd unselectable" src="./src/background/Site_5_2.png" alt="">
               <h3 class="h3_accentColor unselectable">Step 5</h3>
               <h4 class="unselectable">Final render</h5>
               <p class="unselectable">
@@ -238,7 +264,7 @@
             </h2>
           </div>
 
-          <div class="section__submitBlock">
+          <div class="section__submit">
             <form action="submit" class="submitForm">
               <input type="text" maxlength="20" placeholder="Full name" />
               <input type="email" maxlength="30" placeholder="Email" />
