@@ -40,6 +40,10 @@ h6 {
   src: url(./mellanissa.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   background: #000000;

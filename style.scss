@@ -61,6 +61,10 @@ $font-extraBold: 800;
 }
 
 // GLOBAL
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   background: $app-background-color;

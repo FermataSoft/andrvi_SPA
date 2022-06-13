@@ -15,27 +15,27 @@ function randomInteger(min, max) {
   return Math.round(rand);
 }
 
-test_maxLength(document.querySelector("textarea"), 500);
+// test_maxLength(document.querySelector("textarea"), 500);
 
 // Parallax
 gsap.to(".pContent", {
-  yPercent: -100,
+  yPercent: -5,
   ease: "none",
   scrollTrigger: {
-    trigger: ".hero",
+    trigger: ".pSection",
     // start: "top bottom", // the default values
     // end: "bottom top",
-    scrub: true
+    scrub: true,
   }, 
 });
 
 gsap.to(".pImage", {
-  yPercent: 50,
+  yPercent: 30,
   ease: "none",
   scrollTrigger: {
-    trigger: ".hero",
+    trigger: ".pSection",
     // start: "top bottom", // the default values
-    // end: "bottom top",
+    end: "bottom top",
     scrub: true
   }, 
 });
