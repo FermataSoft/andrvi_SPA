@@ -18,24 +18,32 @@ function randomInteger(min, max) {
 // test_maxLength(document.querySelector("textarea"), 500);
 
 // Parallax
-gsap.to(".pContent", {
-  yPercent: -5,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".pSection",
-    // start: "top bottom", // the default values
-    // end: "bottom top",
-    scrub: true,
-  }, 
-});
+// gsap.to(".pContent", {
+//   yPercent: 0,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".pSection",
+//     // start: "top bottom", // the default values
+//     // end: "bottom top",
+//     scrub: true,
+//   },
+// });
 
 gsap.to(".pImage", {
-  yPercent: 30,
+  yPercent: 15,
   ease: "none",
   scrollTrigger: {
     trigger: ".pSection",
-    // start: "top bottom", // the default values
+    start: "top center", // the default values
     end: "bottom top",
-    scrub: true
-  }, 
+    scrub: .5,
+    markers: true,
+  },
 });
+
+// Title on load
+window.onload = function () {
+  let timeline = new TimelineMax();
+  timeline
+    .from("#one", 1, { x: -100 }, 0)
+};
