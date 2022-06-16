@@ -36,14 +36,22 @@ gsap.to(".pImage", {
     trigger: ".pSection",
     start: "top center", // the default values
     end: "bottom top",
-    scrub: .5,
-    markers: true,
+    scrub: 0.5,
+    markers: false,
   },
 });
 
 // Title on load
-window.onload = function () {
-  let timeline = new TimelineMax();
-  timeline
-    .from("#one", 1, { x: -100 }, 0)
-};
+
+
+
+
+// Loading page according to local storage language
+// window.onload = function() {
+//   lang = localStorage.getItem('lang');
+//   if(lang === 'ru') {
+
+//   } else {
+
+//   }
+// }

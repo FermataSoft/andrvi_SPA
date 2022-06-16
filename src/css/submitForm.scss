@@ -1,0 +1,79 @@
+@import "./variables";
+
+.section__submit {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    padding-top: $padding_h2;
+  }
+
+  .submitForm {
+    margin: 50px auto;
+    background-color: #151515;
+    border-radius: 25px;
+    border: 5px solid $accent-blue;
+    width: 500px;
+    height: 420px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+
+    > input {
+      margin: 10px 0;
+      padding: 5px 0;
+      outline: 0;
+      border-bottom: 1px solid $gray;
+      width: 100%;
+      color: $white;
+      background-color: #151515;
+      font-family: $font-roboto;
+      font-weight: $font-medium;
+      font-size: 1em;
+    }
+
+    & textarea {
+      margin: 10px 0;
+      padding: 5px 0;
+      outline: 0;
+      border-bottom: 1px solid $gray;
+      width: 100%;
+      color: $white;
+      background-color: #151515;
+      font-family: $font-roboto;
+      font-weight: $font-medium;
+      font-size: 1em;
+      height: 150px;
+    }
+
+    .checkbox__termsAndConditions_block {
+      align-self: flex-start;
+
+      & label {
+        color: rgb(122, 122, 122);
+        font-family: $font-roboto;
+        font-weight: $font-regular;
+        font-size: 0.8em;
+      }
+    }
+
+    & input[type="submit"] {
+      align-self: flex-start;
+      width: 120px;
+      height: 40px;
+      border-radius: 30px;
+      background-color: $accent-blue;
+      color: $white;
+      font-family: $font-roboto;
+      font-weight: $font-bold;
+      font-size: 1em;
+
+      &:disabled {
+        background-color: $gray;
+      }
+    }
+  }
+}

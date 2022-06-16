@@ -1,0 +1,100 @@
+/* Main STYLES */
+@font-face {
+  font-family: mellanissa;
+  src: url(../fonts/mellanissa.ttf);
+}
+
+.section__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section__submit h2 {
+  padding-top: 80px;
+}
+
+.section__submit .submitForm {
+  margin: 50px auto;
+  background-color: #151515;
+  border-radius: 25px;
+  border: 5px solid #0d99ff;
+  width: 500px;
+  height: 420px;
+  padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 5px;
+}
+
+.section__submit .submitForm > input {
+  margin: 10px 0;
+  padding: 5px 0;
+  outline: 0;
+  border-bottom: 1px solid #606060;
+  width: 100%;
+  color: #ffffff;
+  background-color: #151515;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.section__submit .submitForm textarea {
+  margin: 10px 0;
+  padding: 5px 0;
+  outline: 0;
+  border-bottom: 1px solid #606060;
+  width: 100%;
+  color: #ffffff;
+  background-color: #151515;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  height: 150px;
+}
+
+.section__submit .submitForm .checkbox__termsAndConditions_block {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.section__submit .submitForm .checkbox__termsAndConditions_block label {
+  color: #7a7a7a;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.section__submit .submitForm input[type="submit"] {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 120px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #0d99ff;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.section__submit .submitForm input[type="submit"]:disabled {
+  background-color: #606060;
+}
+/*# sourceMappingURL=submitForm.css.map */

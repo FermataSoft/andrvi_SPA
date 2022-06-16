@@ -1,0 +1,156 @@
+@import "./variables";
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $navbar;
+  z-index: 9999;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  a {
+    font-size: 1.5em;
+    font-weight: $font-medium;
+    color: $white;
+  }
+
+  .navmenu__contactBtn {
+    position: relative;
+    padding: 4px 6px;
+    font-size: 1rem;
+    border: 2px solid $white;
+    line-height: 1rem;
+    border-radius: 5px;
+    transition: 0.1s border ease-out, 0.1s color ease-in;
+  }
+
+  .navmenu__contactBtn:hover {
+    border: 2px solid transparent;
+  }
+
+  .navmenu__contactBtn::before {
+    content: "telegram";
+    position: absolute;
+    padding: 4px 6px;
+    font-size: 1rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.2s all ease-out 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  .navmenu__contactBtn:hover::before {
+    opacity: 1;
+  }
+
+  .navmenu__contactBtn::after {
+    content: "";
+    position: absolute;
+    padding: 4px 6px;
+    font-size: 1em;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: $accent-blue;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(1, 1);
+    transition: 0.3s all ease-out;
+    transition-delay: 0.2s;
+  }
+
+  .navmenu__contactBtn:hover::after {
+    opacity: 1;
+    width: 100%;
+    transform: scale(1, 1);
+    transition-delay: 0s;
+  }
+
+  .navmenu__body {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .selector_lang {
+      opacity: 1;
+      display: flex;
+      gap: 10px;
+
+      input {
+        display: none;
+        &:checked + label {
+          color: $accent-blue;
+        }
+      }
+
+      .navmenu__langSelector {
+        font-size: 1rem;
+        font-weight: $font-bold;
+        color: $white;
+        border: none;
+        cursor: pointer;
+        transition: all 0.1s;
+        position: relative;
+
+        &:active {
+          transform: translate(0, 1px);
+        }
+      }
+    }
+
+    .navmenu {
+      display: flex;
+      gap: 30px;
+
+      .navmenu__items {
+        display: flex;
+        gap: 30px;
+      }
+
+      .navmenu__menuBtn {
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+      }
+      .navmenu__menuBtn a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border-bottom: 2px solid $accent-blue;
+        transform: scale(0.1, 1);
+      }
+
+      .navmenu__menuBtn:hover a::before {
+        opacity: 1;
+        transform: scale(1.2, 1);
+        border-bottom: 2px solid $accent-blue;
+      }
+
+      .navmenu__menuBtn:active {
+        transform: translate(0, 2px);
+      }
+    }
+  }
+}

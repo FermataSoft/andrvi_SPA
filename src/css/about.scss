@@ -1,0 +1,134 @@
+@import "./variables";
+
+.section__about {
+  h2 {
+    padding-top: $padding_h2;
+  }
+
+  .container {
+    padding-bottom: 50px;
+  }
+
+  .timeline__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 150px;
+    row-gap: 80px;
+    padding: 0 45px;
+    margin-top: 30px;
+    font-family: $font-roboto;
+
+    .timeline__item {
+      background: $add-dark-blue;
+      height: 220px;
+      width: 480px;
+      border-radius: 10px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border: 3px solid transparent;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+
+      .timeline__item_number {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        color: rgba(0, 0, 0, 0.12);
+        font-size: 70px;
+        font-weight: $font-extraBold;
+      }
+
+      .timeline__item_imageMain {
+        position: absolute;
+        top: -85px;
+        right: -80px;
+        max-width: 250px;
+        max-height: 250px;
+        z-index: 1;
+        clip-path: inset(81px 76px 0px 0px round 10px);
+        filter: brightness(0.8);
+      }
+
+      .timeline__item_imageAdd {
+        position: absolute;
+        bottom: calc(0% - 125px);
+        right: calc(50% - 125px);
+        // transform: translate(-50%, 50%);
+        width: 250px;
+        height: 250px;
+        z-index: 1;
+        clip-path: inset(0px 0px 122px 0px);
+        filter: brightness(0.8);
+      }
+
+      &:hover {
+        border: 3px solid $accent-blue;
+        background: $blue-gradient;
+
+        .timeline__item_imageMain {
+          clip-path: inset(0px 0px 0px 0px round 10px);
+          filter: brightness(1);
+          animation: rotateImage 12s linear infinite forwards;
+        }
+
+        .timeline__item_imageAdd {
+          clip-path: inset(0px 0px 0px 0px);
+          filter: brightness(1);
+          animation: rotateImage 10s linear infinite forwards;
+        }
+
+        @keyframes rotateImage {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: $accent-blue;
+        border-radius: 10px;
+        top: 25px;
+        left: 0;
+        z-index: -1;
+        transition: 0.3s cubic-bezier(0.53, 0.3, 0.62, 0.85);
+      }
+
+      &:hover::after {
+        left: -15px;
+      }
+
+      .h3_accentColor {
+        color: $accent-blue;
+        font-size: 40px;
+        font-weight: $font-bold;
+      }
+
+      h3 {
+        font-weight: $font-regular;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        z-index: 2;
+      }
+
+      p {
+        font-weight: $font-light;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        z-index: 2;
+      }
+    }
+  }
+}
