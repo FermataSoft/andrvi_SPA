@@ -22,41 +22,97 @@
     align-items: center;
     row-gap: 5px;
 
-    > input {
-      margin: 10px 0;
-      padding: 5px 0;
-      outline: 0;
-      border-bottom: 1px solid $gray;
+    .submitForm__item {
       width: 100%;
-      color: $white;
-      background-color: #151515;
-      font-family: $font-roboto;
-      font-weight: $font-medium;
-      font-size: 1em;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &:focus-within label {
+        transform: translate(0, 5px) scale(0.8);
+      }
+
+      label {
+        position: absolute;
+        pointer-events: none;
+        transform: translate(0, 23px) scale(1);
+        transform-origin: top left;
+        transition: 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms;
+        color: #6f81a5;
+        font-size: 1rem;
+        left: 10px;
+      }
+
+      input {
+        border-bottom: 1px solid $gray;
+        width: 100%;
+        height: 50px;
+        background-color: #151515;
+        color: $white;
+        font-family: $font-roboto;
+        font-weight: $font-regular;
+        font-size: 1rem;
+        padding: 20px 10px 4px 10px;
+        outline: none;
+        box-shadow: none;
+        transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
+
+        &::placeholder {
+          color: transparent;
+        }
+      }
+
+      & textarea {
+        padding: 20px 10px 4px 10px;
+        outline: none;
+        border-bottom: 1px solid $gray;
+        width: 100%;
+        color: $white;
+        background-color: #151515;
+        font-family: $font-roboto;
+        font-weight: $font-medium;
+        font-size: 1rem;
+
+        &::placeholder {
+          color: transparent;
+        }
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: $accent-blue;
+      }
+
+      input:not(:placeholder-shown) + label {
+        transform: translate(0, 5px) scale(0.8);
+      }
     }
 
-    & textarea {
-      margin: 10px 0;
-      padding: 5px 0;
-      outline: 0;
-      border-bottom: 1px solid $gray;
-      width: 100%;
-      color: $white;
-      background-color: #151515;
-      font-family: $font-roboto;
-      font-weight: $font-medium;
-      font-size: 1em;
-      height: 150px;
-    }
+    // https://www.youtube.com/watch?v=zivkHZ9w7DY
 
-    .checkbox__termsAndConditions_block {
+    .checkbox__termsAndConditionsBlock {
       align-self: flex-start;
+
+      input[type="checkbox"] {
+        cursor: pointer;
+
+        &:focus {
+          box-shadow: 0 0 2px 2px $accent-blue;
+        }
+      }
 
       & label {
         color: rgb(122, 122, 122);
         font-family: $font-roboto;
         font-weight: $font-regular;
-        font-size: 0.8em;
+        font-size: 0.8rem;
+      }
+
+      .temsAndConditionsLink {
+        color: $accent-blue;
+        font-family: $font-roboto;
+        font-weight: $font-regular;
+        font-size: 0.8rem;
       }
     }
 

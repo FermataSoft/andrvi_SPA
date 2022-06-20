@@ -51,8 +51,8 @@
             <div class="selector_lang">
               <input type="radio" id="en" name="lang" checked></input>
               <label for="en" class="navmenu__langSelector checked">EN</label>
-             
-              <input  type="radio" id="ru" name="lang" ></input>
+
+              <input type="radio" id="ru" name="lang"></input>
               <label for="ru" class="navmenu__langSelector">RU</label>
             </div>
 
@@ -93,7 +93,8 @@
               <path class="mouse__body"
                 d="M56.09,7A19.86,19.86,0,0,1,75.93,26.84V73.16A19.86,19.86,0,0,1,56.09,93H49.77A19.86,19.86,0,0,1,29.93,73.16V26.84A19.86,19.86,0,0,1,49.77,7h6.32m0-7H49.77A26.84,26.84,0,0,0,22.93,26.84V73.16A26.84,26.84,0,0,0,49.77,100h6.32A26.84,26.84,0,0,0,82.93,73.16V26.84A26.84,26.84,0,0,0,56.09,0Z"
                 transform="translate(-22.93)" />
-              <path class="mouse__wheel" d="M52.93,17.42c-2.76,0-5,3.36-5,7.5s2.24,7.5,5,7.5,5-3.36,5-7.5-2.24-7.5-5-7.5Z"
+              <path class="mouse__wheel"
+                d="M52.93,17.42c-2.76,0-5,3.36-5,7.5s2.24,7.5,5,7.5,5-3.36,5-7.5-2.24-7.5-5-7.5Z"
                 transform="translate(-22.93)" />
             </svg>
             <p class="scrollDownTitle" href="#work">scroll down</p>
@@ -154,14 +155,14 @@
 
       <div class="work__background pImage">
         <div class="work__background_left">
-          <img id="work__background_image2" src="./src/images/background/Page_BG_2.png" alt="backgroundImage" width="400px"
-            height="auto">
-          <img id="work__background_image3" src="./src/images/background/Page_BG_3.png" alt="backgroundImage" width="400px"
-            height="auto">
+          <img id="work__background_image2" src="./src/images/background/Page_BG_2.png" alt="backgroundImage"
+            width="400px" height="auto">
+          <img id="work__background_image3" src="./src/images/background/Page_BG_3.png" alt="backgroundImage"
+            width="400px" height="auto">
         </div>
 
-        <img id="work__background_image1" src="./src/images/background/Page_BG_1.png" alt="backgroundImage" width="400px"
-          height="auto">
+        <img id="work__background_image1" src="./src/images/background/Page_BG_1.png" alt="backgroundImage"
+          width="400px" height="auto">
       </div>
     </section>
 
@@ -242,15 +243,29 @@
 
           <div class="section__submit">
             <form action="submit" class="submitForm">
-              <input type="text" maxlength="20" placeholder="Full name" />
-              <input type="email" maxlength="30" placeholder="Email" />
-              <textarea placeholder="Describe your idea" wrap="soft" rows="7" maxlength="300"
-                style="resize: none"></textarea>
-              <div class="checkbox__termsAndConditions_block">
-                <input type="checkbox" name="terms-and-conditions" id="temsAndConditions" value="Accept" />
-                <label for="temsAndConditions">I agree with terms and conditions</label>
+              <div class="submitForm__item">
+                <label for="name">Full name</label>
+                <input type="text" maxlength="20" id="name" class="submitForm__itemInput" required placeholder="Full name"/>
               </div>
 
+              <div class="submitForm__item">
+                <label for="email">Email</label>
+                <input type="email" maxlength="30" id="email" class="submitForm__itemInput" required placeholder="Email"/>
+              </div>
+
+              <div class="submitForm__item">
+                <label for="describeIdea">Describe your idea</label>
+                <textarea wrap="soft" rows="7" maxlength="300"
+                  style="resize: none" id="describeIdea" class="submitForm__itemInput" required placeholder="Describe your idea" ></textarea>
+              </div>
+
+              <div class="checkbox__termsAndConditionsBlock">
+                <input type="checkbox" name="terms-and-conditions" id="temsAndConditions" value="Accept" checked />
+                <div class="termsAndConditionsBlock__label">
+                  <label for="temsAndConditions" class="unselectable">I agree with </label>
+                  <a href="#" class="temsAndConditionsLink">terms and conditions</a>
+                </div>
+              </div>
               <input type="submit" value="Submit" disabled />
             </form>
           </div>
@@ -263,10 +278,10 @@
               src="./src/images/social sites/behance.svg" alt="behance" /></a>
           <a href="mailto:av_andrvi@mail.ru" id="email" target="_blank"><img src="./src/images/social sites/email.svg"
               alt="email" /></a>
-          <a href="https://t.me/av_andrvi" id="telegram" target="_blank"><img src="./src/images/social sites/telegram.svg"
-              alt="telegram" /></a>
-          <a href="https://twitter.com/av_andrvi" id="twitter" target="_blank"><img src="./src/images/social sites/twitter.svg"
-              alt="twitter" /></a>
+          <a href="https://t.me/av_andrvi" id="telegram" target="_blank"><img
+              src="./src/images/social sites/telegram.svg" alt="telegram" /></a>
+          <a href="https://twitter.com/av_andrvi" id="twitter" target="_blank"><img
+              src="./src/images/social sites/twitter.svg" alt="twitter" /></a>
           <a href="https://www.linkedin.com/in/andrvi/" id="linkedIn" target="_blank"><img
               src="./src/images/social sites/linkedIn.svg" alt="linkedIn" /></a>
           <a href="https://www.facebook.com/AV.AndrVi/" id="facebook" target="_blank"><img
@@ -291,6 +306,7 @@
 <script src="./script/animation.js"></script>
 <script src="./script/translate.js"></script>
 <script src="./script/worksUpload.js"></script>
+<!-- <script src="./script/formSend.js"></script> -->
 <script src="./script/script.js"></script>
 
 </html>

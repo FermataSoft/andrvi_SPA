@@ -115,19 +115,15 @@ nav .navmenu__body .selector_lang {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
 nav .navmenu__body .selector_lang input {
   display: none;
 }
 
-nav .navmenu__body .selector_lang input:checked + label {
-  color: #0d99ff;
-}
-
 nav .navmenu__body .selector_lang .navmenu__langSelector {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   border: none;
@@ -140,6 +136,35 @@ nav .navmenu__body .selector_lang .navmenu__langSelector {
 nav .navmenu__body .selector_lang .navmenu__langSelector:active {
   -webkit-transform: translate(0, 1px);
           transform: translate(0, 1px);
+}
+
+nav .navmenu__body .selector_lang label::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-bottom: 1px solid #0d99ff;
+  -webkit-transform: scale(0.1, 1);
+          transform: scale(0.1, 1);
+}
+
+nav .navmenu__body .selector_lang input:checked + label::before {
+  opacity: 1;
+  -webkit-transform: scale(1.2, 1);
+          transform: scale(1.2, 1);
+  border-bottom: 1px solid #0d99ff;
+}
+
+nav .navmenu__body .selector_lang input:not(:checked) + label:hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1.2, 1);
+          transform: scale(1.2, 1);
+  border-bottom: 1px solid #ffffff;
 }
 
 nav .navmenu__body .navmenu {
