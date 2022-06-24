@@ -1,8 +1,9 @@
-@import "./variables";
+@import './variables';
 
 .section__submit {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   h2 {
     padding-top: $padding_h2;
@@ -14,8 +15,8 @@
     border-radius: 25px;
     border: 5px solid $accent-blue;
     width: 500px;
-    height: 420px;
-    padding: 20px 50px;
+    height: 430px;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,20 +29,19 @@
       display: flex;
       flex-direction: column;
 
-      &:focus-within label {
-        transform: translate(0, 5px) scale(0.8);
-      }
-
       label {
         position: absolute;
         pointer-events: none;
-        transform: translate(0, 23px) scale(1);
         transform-origin: top left;
         transition: 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms;
         color: #6f81a5;
         font-size: 1rem;
         left: 10px;
       }
+
+      // &:focus-within label {
+      //   transform: translate(0, 5px) scale(0.8);
+      // }
 
       input {
         border-bottom: 1px solid $gray;
@@ -50,32 +50,47 @@
         background-color: #151515;
         color: $white;
         font-family: $font-roboto;
-        font-weight: $font-regular;
+        font-weight: $font-light;
         font-size: 1rem;
         padding: 20px 10px 4px 10px;
         outline: none;
         box-shadow: none;
         transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
-
-        &::placeholder {
-          color: transparent;
-        }
       }
 
       & textarea {
-        padding: 20px 10px 4px 10px;
+        margin-top: 23px;
+        padding: 0px 10px 4px 10px;
         outline: none;
         border-bottom: 1px solid $gray;
         width: 100%;
         color: $white;
         background-color: #151515;
         font-family: $font-roboto;
-        font-weight: $font-medium;
+        font-weight: $font-light;
         font-size: 1rem;
+      }
 
-        &::placeholder {
-          color: transparent;
-        }
+      // Floating label
+      input::placeholder,
+      textarea::placeholder {
+        color: transparent;
+      }
+
+      input:placeholder-shown + label,
+      textarea:placeholder-shown + label {
+        transform: translate(0, 23px) scale(1);
+      }
+
+      input:not(:placeholder-shown) + label,
+      textarea:not(:placeholder-shown) + label {
+        transform: translate(0, 5px) scale(0.8);
+      }
+
+      input:focus + label,
+      textarea:focus + label {
+        transform: translate(0, 5px) scale(0.8);
+        color: $accent-blue;
       }
 
       input:focus,
@@ -83,21 +98,24 @@
         border-color: $accent-blue;
       }
 
-      input:not(:placeholder-shown) + label {
-        transform: translate(0, 5px) scale(0.8);
+      ._error {
+        border-color: red;
       }
     }
 
-    // https://www.youtube.com/watch?v=zivkHZ9w7DY
-
     .checkbox__termsAndConditionsBlock {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      justify-self: flex-start;
       align-self: flex-start;
 
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         cursor: pointer;
 
-        &:focus {
-          box-shadow: 0 0 2px 2px $accent-blue;
+        &._error {
+          box-shadow: 0 0 3px 1px red;
         }
       }
 
@@ -108,15 +126,19 @@
         font-size: 0.8rem;
       }
 
-      .temsAndConditionsLink {
-        color: $accent-blue;
-        font-family: $font-roboto;
-        font-weight: $font-regular;
-        font-size: 0.8rem;
+      .termsAndConditionsBlock__label {
+        display: inline-flex;
+
+        .temsAndConditionsLink {
+          color: $accent-blue;
+          font-family: $font-roboto;
+          font-weight: $font-regular;
+          font-size: 0.8rem;
+        }
       }
     }
 
-    & input[type="submit"] {
+    & input[type='submit'] {
       align-self: flex-start;
       width: 120px;
       height: 40px;
@@ -125,11 +147,122 @@
       color: $white;
       font-family: $font-roboto;
       font-weight: $font-bold;
-      font-size: 1em;
+      font-size: 1rem;
+      transition: transform 0.05s;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $accent-blue-hover;
+      }
 
       &:disabled {
         background-color: $gray;
       }
+
+      &:not(:disabled):active {
+        transform: translate(0, 1px);
+      }
     }
   }
+}
+
+// Loader
+.form__loader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $app-background-color;
+  z-index: 999;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+
+  .form__loader__animation {
+    width: 10rem;
+    height: 10rem;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+
+    .form__face {
+      position: absolute;
+      border-radius: 50%;
+      border-style: solid;
+      animation: animate 3s linear infinite;
+    }
+
+    .form__face:nth-child(1) {
+      width: 100%;
+      height: 100%;
+      color: $accent-blue;
+      border-color: currentColor transparent transparent currentColor;
+      border-width: 0.2em 0.2em 0em 0em;
+      --deg: -45deg;
+      animation-direction: normal;
+    }
+
+    .form__face:nth-child(2) {
+      width: 65%;
+      height: 65%;
+      color: rgb(110, 252, 28);
+      border-color: currentColor currentColor transparent transparent;
+      border-width: 0.2em 0em 0em 0.2em;
+      --deg: -135deg;
+      animation-direction: reverse;
+    }
+
+    .form__face:nth-child(3) {
+      width: 30%;
+      height: 30%;
+      color: rgb(212, 255, 20);
+      border-color: transparent transparent currentColor currentColor;
+      border-width: 0.2em 0em 0em 0.2em;
+      --deg: -135deg;
+      animation-direction: normal;
+    }
+
+    .form__face .form__circle {
+      position: absolute;
+      width: 51%;
+      height: 0.1em;
+      top: 50%;
+      left: 50%;
+      background-color: transparent;
+      transform: rotate(var(--deg));
+      transform-origin: left;
+    }
+
+    .form__face .form__circle::before {
+      position: absolute;
+      top: -0.5em;
+      right: -0.5em;
+      content: '';
+      width: 1em;
+      height: 1em;
+      background-color: currentColor;
+      border-radius: 50%;
+      box-shadow: 0 0 2em, 0 0 4em, 0 0 6em, 0 0 8em, 0 0 20em, 0 0 0 0.5em rgba(255, 255, 0, 0.1);
+    }
+  }
+}
+
+@keyframes animate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.submitForm._sending .form__loader {
+  visibility: visible;
+  opacity: 0.85;
 }

@@ -8,6 +8,7 @@ $dark: #050d21;
 $white: #ffffff;
 $gray: #606060;
 $accent-blue: #0d99ff;
+$accent-blue-hover: #0b74bf;
 $add-dark-blue: linear-gradient(252.85deg, #0e0e25 0%, #0e0e25 100%);
 // $blue-gradient: linear-gradient(252.85deg, #006fbf 0%, #7000c0 100%);
 $blue-gradient: linear-gradient(252.85deg, #004272 0%, #47007a 100%);
@@ -23,5 +24,7 @@ $font-extraBold: 800;
 
 @font-face {
   font-family: mellanissa;
-  src: url(../fonts/mellanissa.ttf);
+  src: url('../fonts/mellanissa.ttf');
 }
+
+$mobile-attention: 500px;

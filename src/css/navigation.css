@@ -1,9 +1,8 @@
 /* Main STYLES */
 @font-face {
   font-family: mellanissa;
-  src: url(../fonts/mellanissa.ttf);
+  src: url("../fonts/mellanissa.ttf");
 }
-
 nav {
   position: fixed;
   top: 0;
@@ -14,13 +13,11 @@ nav {
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
 }
-
 nav a {
   font-size: 1.5em;
   font-weight: 500;
   color: #ffffff;
 }
-
 nav .navmenu__contactBtn {
   position: relative;
   padding: 4px 6px;
@@ -28,14 +25,11 @@ nav .navmenu__contactBtn {
   border: 2px solid #ffffff;
   line-height: 1rem;
   border-radius: 5px;
-  -webkit-transition: 0.1s border ease-out, 0.1s color ease-in;
   transition: 0.1s border ease-out, 0.1s color ease-in;
 }
-
 nav .navmenu__contactBtn:hover {
   border: 2px solid transparent;
 }
-
 nav .navmenu__contactBtn::before {
   content: "telegram";
   position: absolute;
@@ -46,24 +40,16 @@ nav .navmenu__contactBtn::before {
   width: 100%;
   height: 100%;
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   z-index: 2;
   opacity: 0;
-  -webkit-transition: 0.2s all ease-out 0.2s;
   transition: 0.2s all ease-out 0.2s;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
-
 nav .navmenu__contactBtn:hover::before {
   opacity: 1;
 }
-
 nav .navmenu__contactBtn::after {
   content: "";
   position: absolute;
@@ -77,67 +63,45 @@ nav .navmenu__contactBtn::after {
   background-color: #0d99ff;
   z-index: 1;
   opacity: 0;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-  -webkit-transition: 0.3s all ease-out;
+  transform: scale(1, 1);
   transition: 0.3s all ease-out;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
-
 nav .navmenu__contactBtn:hover::after {
   opacity: 1;
   width: 100%;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  transform: scale(1, 1);
+  transition-delay: 0s;
 }
-
 nav .navmenu__body {
   position: relative;
   height: 60px;
   width: 100%;
   z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 nav .navmenu__body .selector_lang {
   opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 15px;
 }
-
 nav .navmenu__body .selector_lang input {
   display: none;
 }
-
 nav .navmenu__body .selector_lang .navmenu__langSelector {
   font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   border: none;
   cursor: pointer;
-  -webkit-transition: all 0.1s;
   transition: all 0.1s;
   position: relative;
 }
-
 nav .navmenu__body .selector_lang .navmenu__langSelector:active {
-  -webkit-transform: translate(0, 1px);
-          transform: translate(0, 1px);
+  transform: translate(0, 1px);
 }
-
 nav .navmenu__body .selector_lang label::before {
   content: "";
   position: absolute;
@@ -146,49 +110,34 @@ nav .navmenu__body .selector_lang label::before {
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-bottom: 1px solid #0d99ff;
-  -webkit-transform: scale(0.1, 1);
-          transform: scale(0.1, 1);
+  transform: scale(0.1, 1);
 }
-
 nav .navmenu__body .selector_lang input:checked + label::before {
   opacity: 1;
-  -webkit-transform: scale(1.2, 1);
-          transform: scale(1.2, 1);
+  transform: scale(1.2, 1);
   border-bottom: 1px solid #0d99ff;
 }
-
 nav .navmenu__body .selector_lang input:not(:checked) + label:hover::before {
   opacity: 1;
-  -webkit-transform: scale(1.2, 1);
-          transform: scale(1.2, 1);
+  transform: scale(1.2, 1);
   border-bottom: 1px solid #ffffff;
 }
-
 nav .navmenu__body .navmenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
-
 nav .navmenu__body .navmenu .navmenu__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
-
 nav .navmenu__body .navmenu .navmenu__menuBtn {
   border: none;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   position: relative;
 }
-
 nav .navmenu__body .navmenu .navmenu__menuBtn a::before {
   content: "";
   position: absolute;
@@ -198,22 +147,15 @@ nav .navmenu__body .navmenu .navmenu__menuBtn a::before {
   height: 100%;
   z-index: 1;
   opacity: 0;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border-bottom: 2px solid #0d99ff;
-  -webkit-transform: scale(0.1, 1);
-          transform: scale(0.1, 1);
+  transform: scale(0.1, 1);
 }
-
 nav .navmenu__body .navmenu .navmenu__menuBtn:hover a::before {
   opacity: 1;
-  -webkit-transform: scale(1.2, 1);
-          transform: scale(1.2, 1);
+  transform: scale(1.2, 1);
   border-bottom: 2px solid #0d99ff;
 }
-
 nav .navmenu__body .navmenu .navmenu__menuBtn:active {
-  -webkit-transform: translate(0, 2px);
-          transform: translate(0, 2px);
-}
-/*# sourceMappingURL=navigation.css.map */
+  transform: translate(0, 2px);
+}/*# sourceMappingURL=navigation.css.map */

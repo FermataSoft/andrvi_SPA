@@ -166,8 +166,6 @@
       </div>
     </section>
 
-
-
     <div id="about" class="section__about">
       <div class="container">
         <div>
@@ -242,31 +240,49 @@
           </div>
 
           <div class="section__submit">
+
+
             <form action="submit" class="submitForm">
+              <div class="form__loader">
+                <div class="form__loader__animation">
+                  <div class="form__face">
+                    <div class="form__circle"></div>
+                  </div>
+                  <div class="form__face">
+                    <div class="form__circle"></div>
+                  </div>
+                  <div class="form__face">
+                    <div class="form__circle"></div>
+                  </div>
+                </div>
+              </div>
               <div class="submitForm__item">
-                <label for="name">Full name</label>
-                <input type="text" maxlength="20" id="name" class="submitForm__itemInput" required placeholder="Full name"/>
+                <input type="text" maxlength="44" id="name" class="submitForm__itemInput _required"
+                  placeholder="Full name" />
+                <label for="name">Full name*</label>
               </div>
 
               <div class="submitForm__item">
-                <label for="email">Email</label>
-                <input type="email" maxlength="30" id="email" class="submitForm__itemInput" required placeholder="Email"/>
+                <input type="email" maxlength="44" id="email" class="submitForm__itemInput _required _email"
+                  placeholder="Email" />
+                <label for="email">Email*</label>
               </div>
 
               <div class="submitForm__item">
-                <label for="describeIdea">Describe your idea</label>
-                <textarea wrap="soft" rows="7" maxlength="300"
-                  style="resize: none" id="describeIdea" class="submitForm__itemInput" required placeholder="Describe your idea" ></textarea>
+                <textarea wrap="soft" rows="7" maxlength="300" style="resize: none" id="message"
+                  class="submitForm__itemInput _required" placeholder="Describe your idea"></textarea>
+                <label for="message">Describe your idea*</label>
               </div>
 
               <div class="checkbox__termsAndConditionsBlock">
-                <input type="checkbox" name="terms-and-conditions" id="temsAndConditions" value="Accept" checked />
+                <input type="checkbox" name="terms-and-conditions" id="temsAndConditions" value="Accept"
+                  class="_required" checked />
                 <div class="termsAndConditionsBlock__label">
-                  <label for="temsAndConditions" class="unselectable">I agree with </label>
-                  <a href="#" class="temsAndConditionsLink">terms and conditions</a>
+                  <label for="temsAndConditions" class="unselectable">I agree with&nbsp; </label>
+                  <a href="#" class="temsAndConditionsLink">terms and conditions*</a>
                 </div>
               </div>
-              <input type="submit" value="Submit" disabled />
+              <input type="submit" value="Submit" />
             </form>
           </div>
         </div>
@@ -306,7 +322,7 @@
 <script src="./script/animation.js"></script>
 <script src="./script/translate.js"></script>
 <script src="./script/worksUpload.js"></script>
-<!-- <script src="./script/formSend.js"></script> -->
+<script src="./script/formSend.js"></script>
 <script src="./script/script.js"></script>
 
 </html>

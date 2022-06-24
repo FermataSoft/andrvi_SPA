@@ -1,78 +1,45 @@
 /* Main STYLES */
 @font-face {
   font-family: mellanissa;
-  src: url(../fonts/mellanissa.ttf);
+  src: url("../fonts/mellanissa.ttf");
 }
-
 .section__submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
+  position: relative;
 }
-
 .section__submit h2 {
   padding-top: 80px;
 }
-
 .section__submit .submitForm {
   margin: 50px auto;
   background-color: #151515;
   border-radius: 25px;
   border: 5px solid #0d99ff;
   width: 500px;
-  height: 420px;
-  padding: 20px 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 430px;
+  padding: 20px 40px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 5px;
 }
-
 .section__submit .submitForm .submitForm__item {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
-.section__submit .submitForm .submitForm__item:focus-within label {
-  -webkit-transform: translate(0, 5px) scale(0.8);
-          transform: translate(0, 5px) scale(0.8);
-}
-
 .section__submit .submitForm .submitForm__item label {
   position: absolute;
   pointer-events: none;
-  -webkit-transform: translate(0, 23px) scale(1);
-          transform: translate(0, 23px) scale(1);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transition: 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transform-origin: top left;
   transition: 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms;
   color: #6f81a5;
   font-size: 1rem;
   left: 10px;
 }
-
 .section__submit .submitForm .submitForm__item input {
   border-bottom: 1px solid #606060;
   width: 100%;
@@ -80,101 +47,98 @@
   background-color: #151515;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   padding: 20px 10px 4px 10px;
   outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: none;
   transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
-
-.section__submit .submitForm .submitForm__item input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.section__submit .submitForm .submitForm__item input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.section__submit .submitForm .submitForm__item input::-ms-input-placeholder {
-  color: transparent;
-}
-
-.section__submit .submitForm .submitForm__item input::placeholder {
-  color: transparent;
-}
-
 .section__submit .submitForm .submitForm__item textarea {
-  padding: 20px 10px 4px 10px;
+  margin-top: 23px;
+  padding: 0px 10px 4px 10px;
   outline: none;
   border-bottom: 1px solid #606060;
   width: 100%;
   color: #ffffff;
   background-color: #151515;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1rem;
 }
-
-.section__submit .submitForm .submitForm__item textarea::-webkit-input-placeholder {
+.section__submit .submitForm .submitForm__item input::-moz-placeholder, .section__submit .submitForm .submitForm__item textarea::-moz-placeholder {
   color: transparent;
 }
-
-.section__submit .submitForm .submitForm__item textarea:-ms-input-placeholder {
+.section__submit .submitForm .submitForm__item input:-ms-input-placeholder, .section__submit .submitForm .submitForm__item textarea:-ms-input-placeholder {
   color: transparent;
 }
-
-.section__submit .submitForm .submitForm__item textarea::-ms-input-placeholder {
-  color: transparent;
-}
-
+.section__submit .submitForm .submitForm__item input::placeholder,
 .section__submit .submitForm .submitForm__item textarea::placeholder {
   color: transparent;
 }
-
+.section__submit .submitForm .submitForm__item input:-moz-placeholder-shown + label, .section__submit .submitForm .submitForm__item textarea:-moz-placeholder-shown + label {
+  transform: translate(0, 23px) scale(1);
+}
+.section__submit .submitForm .submitForm__item input:-ms-input-placeholder + label, .section__submit .submitForm .submitForm__item textarea:-ms-input-placeholder + label {
+  transform: translate(0, 23px) scale(1);
+}
+.section__submit .submitForm .submitForm__item input:placeholder-shown + label,
+.section__submit .submitForm .submitForm__item textarea:placeholder-shown + label {
+  transform: translate(0, 23px) scale(1);
+}
+.section__submit .submitForm .submitForm__item input:not(:-moz-placeholder-shown) + label, .section__submit .submitForm .submitForm__item textarea:not(:-moz-placeholder-shown) + label {
+  transform: translate(0, 5px) scale(0.8);
+}
+.section__submit .submitForm .submitForm__item input:not(:-ms-input-placeholder) + label, .section__submit .submitForm .submitForm__item textarea:not(:-ms-input-placeholder) + label {
+  transform: translate(0, 5px) scale(0.8);
+}
+.section__submit .submitForm .submitForm__item input:not(:placeholder-shown) + label,
+.section__submit .submitForm .submitForm__item textarea:not(:placeholder-shown) + label {
+  transform: translate(0, 5px) scale(0.8);
+}
+.section__submit .submitForm .submitForm__item input:focus + label,
+.section__submit .submitForm .submitForm__item textarea:focus + label {
+  transform: translate(0, 5px) scale(0.8);
+  color: #0d99ff;
+}
 .section__submit .submitForm .submitForm__item input:focus,
 .section__submit .submitForm .submitForm__item textarea:focus {
   border-color: #0d99ff;
 }
-
-.section__submit .submitForm .submitForm__item input:not(:placeholder-shown) + label {
-  -webkit-transform: translate(0, 5px) scale(0.8);
-          transform: translate(0, 5px) scale(0.8);
+.section__submit .submitForm .submitForm__item ._error {
+  border-color: red;
 }
-
 .section__submit .submitForm .checkbox__termsAndConditionsBlock {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-self: flex-start;
+  align-self: flex-start;
 }
-
-.section__submit .submitForm .checkbox__termsAndConditionsBlock input[type="checkbox"] {
+.section__submit .submitForm .checkbox__termsAndConditionsBlock input[type=checkbox] {
   cursor: pointer;
 }
-
-.section__submit .submitForm .checkbox__termsAndConditionsBlock input[type="checkbox"]:focus {
-  -webkit-box-shadow: 0 0 2px 2px #0d99ff;
-          box-shadow: 0 0 2px 2px #0d99ff;
+.section__submit .submitForm .checkbox__termsAndConditionsBlock input[type=checkbox]._error {
+  box-shadow: 0 0 3px 1px red;
 }
-
 .section__submit .submitForm .checkbox__termsAndConditionsBlock label {
-  color: #7a7a7a;
+  color: rgb(122, 122, 122);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
 }
-
-.section__submit .submitForm .checkbox__termsAndConditionsBlock .temsAndConditionsLink {
+.section__submit .submitForm .checkbox__termsAndConditionsBlock .termsAndConditionsBlock__label {
+  display: inline-flex;
+}
+.section__submit .submitForm .checkbox__termsAndConditionsBlock .termsAndConditionsBlock__label .temsAndConditionsLink {
   color: #0d99ff;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
 }
-
-.section__submit .submitForm input[type="submit"] {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.section__submit .submitForm input[type=submit] {
+  align-self: flex-start;
   width: 120px;
   height: 40px;
   border-radius: 30px;
@@ -182,10 +146,117 @@
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1rem;
+  transition: transform 0.05s;
+  transition: background-color 0.3s ease;
 }
-
-.section__submit .submitForm input[type="submit"]:disabled {
+.section__submit .submitForm input[type=submit]:hover {
+  background-color: #0b74bf;
+}
+.section__submit .submitForm input[type=submit]:disabled {
   background-color: #606060;
 }
-/*# sourceMappingURL=submitForm.css.map */
+.section__submit .submitForm input[type=submit]:not(:disabled):active {
+  transform: translate(0, 1px);
+}
+
+.form__loader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  z-index: 999;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+.form__loader .form__loader__animation {
+  width: 10rem;
+  height: 10rem;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+.form__loader .form__loader__animation .form__face {
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+.form__loader .form__loader__animation .form__face:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  color: #0d99ff;
+  border-color: currentColor transparent transparent currentColor;
+  border-width: 0.2em 0.2em 0em 0em;
+  --deg: -45deg;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+.form__loader .form__loader__animation .form__face:nth-child(2) {
+  width: 65%;
+  height: 65%;
+  color: rgb(110, 252, 28);
+  border-color: currentColor currentColor transparent transparent;
+  border-width: 0.2em 0em 0em 0.2em;
+  --deg: -135deg;
+  animation-direction: reverse;
+}
+.form__loader .form__loader__animation .form__face:nth-child(3) {
+  width: 30%;
+  height: 30%;
+  color: rgb(212, 255, 20);
+  border-color: transparent transparent currentColor currentColor;
+  border-width: 0.2em 0em 0em 0.2em;
+  --deg: -135deg;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+.form__loader .form__loader__animation .form__face .form__circle {
+  position: absolute;
+  width: 51%;
+  height: 0.1em;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  transform: rotate(var(--deg));
+  transform-origin: left;
+}
+.form__loader .form__loader__animation .form__face .form__circle::before {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 2em, 0 0 4em, 0 0 6em, 0 0 8em, 0 0 20em, 0 0 0 0.5em rgba(255, 255, 0, 0.1);
+}
+
+@-webkit-keyframes animate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes animate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.submitForm._sending .form__loader {
+  visibility: visible;
+  opacity: 0.85;
+}/*# sourceMappingURL=submitForm.css.map */

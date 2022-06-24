@@ -1,52 +1,38 @@
 /* Main STYLES */
 @font-face {
   font-family: mellanissa;
-  src: url(../fonts/mellanissa.ttf);
+  src: url("../fonts/mellanissa.ttf");
 }
-
 .section__about h2 {
   padding-top: 80px;
 }
-
 .section__about .container {
   padding-bottom: 50px;
 }
-
 .section__about .timeline__items {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 150px;
-          column-gap: 150px;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 150px;
+       column-gap: 150px;
   row-gap: 80px;
   padding: 0 45px;
   margin-top: 30px;
   font-family: "Roboto", sans-serif;
 }
-
 .section__about .timeline__items .timeline__item {
   background: linear-gradient(252.85deg, #0e0e25 0%, #0e0e25 100%);
   height: 220px;
   width: 480px;
   border-radius: 10px;
   padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 5px;
   border: 3px solid transparent;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: relative;
-  -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
 }
-
 .section__about .timeline__items .timeline__item .timeline__item_number {
   position: absolute;
   left: 10px;
@@ -55,7 +41,6 @@
   font-size: 70px;
   font-weight: 800;
 }
-
 .section__about .timeline__items .timeline__item .timeline__item_imageMain {
   position: absolute;
   top: -85px;
@@ -65,10 +50,8 @@
   z-index: 1;
   -webkit-clip-path: inset(81px 76px 0px 0px round 10px);
           clip-path: inset(81px 76px 0px 0px round 10px);
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+  filter: brightness(0.8);
 }
-
 .section__about .timeline__items .timeline__item .timeline__item_imageAdd {
   position: absolute;
   bottom: calc(0% - 125px);
@@ -78,55 +61,42 @@
   z-index: 1;
   -webkit-clip-path: inset(0px 0px 122px 0px);
           clip-path: inset(0px 0px 122px 0px);
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+  filter: brightness(0.8);
 }
-
 .section__about .timeline__items .timeline__item:hover {
   border: 3px solid #0d99ff;
   background: linear-gradient(252.85deg, #004272 0%, #47007a 100%);
 }
-
 .section__about .timeline__items .timeline__item:hover .timeline__item_imageMain {
   -webkit-clip-path: inset(0px 0px 0px 0px round 10px);
           clip-path: inset(0px 0px 0px 0px round 10px);
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
+  filter: brightness(1);
   -webkit-animation: rotateImage 12s linear infinite forwards;
           animation: rotateImage 12s linear infinite forwards;
 }
-
 .section__about .timeline__items .timeline__item:hover .timeline__item_imageAdd {
   -webkit-clip-path: inset(0px 0px 0px 0px);
           clip-path: inset(0px 0px 0px 0px);
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
+  filter: brightness(1);
   -webkit-animation: rotateImage 10s linear infinite forwards;
           animation: rotateImage 10s linear infinite forwards;
 }
-
 @-webkit-keyframes rotateImage {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes rotateImage {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 .section__about .timeline__items .timeline__item::after {
   content: "";
   position: absolute;
@@ -137,20 +107,16 @@
   top: 25px;
   left: 0;
   z-index: -1;
-  -webkit-transition: 0.3s cubic-bezier(0.53, 0.3, 0.62, 0.85);
   transition: 0.3s cubic-bezier(0.53, 0.3, 0.62, 0.85);
 }
-
 .section__about .timeline__items .timeline__item:hover::after {
   left: -15px;
 }
-
 .section__about .timeline__items .timeline__item .h3_accentColor {
   color: #0d99ff;
   font-size: 40px;
   font-weight: 700;
 }
-
 .section__about .timeline__items .timeline__item h3 {
   font-weight: 400;
   color: white;
@@ -158,12 +124,10 @@
   font-size: 30px;
   z-index: 2;
 }
-
 .section__about .timeline__items .timeline__item p {
   font-weight: 300;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
   z-index: 2;
-}
-/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=about.css.map */

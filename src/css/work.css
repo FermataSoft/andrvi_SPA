@@ -1,40 +1,32 @@
 /* Main STYLES */
 @font-face {
   font-family: mellanissa;
-  src: url(../fonts/mellanissa.ttf);
+  src: url("../fonts/mellanissa.ttf");
 }
-
 .section__work {
   margin-top: 100vh;
 }
-
 .section__work h2 {
   padding-top: 60px;
   margin: 0 0 30px 0;
 }
-
 .section__work .work__tabs {
   width: 100%;
   padding-top: 80px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
-
 .section__work .work__tabs > label {
   padding: 10px 10px 10px 10px;
   border: none;
   cursor: pointer;
   position: relative;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   font-size: 30px;
   font-weight: 500;
   color: #ffffff;
   text-align: center;
 }
-
 .section__work .work__tabs > label::before {
   content: "";
   position: absolute;
@@ -43,68 +35,51 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border-bottom: 2px solid #0d99ff;
-  -webkit-transform: scale(0.1, 1);
-          transform: scale(0.1, 1);
+  transform: scale(0.1, 1);
 }
-
 .section__work input:checked + label::before {
   opacity: 1;
-  -webkit-transform: scale(0.93, 1);
-          transform: scale(0.93, 1);
+  transform: scale(0.93, 1);
   border-bottom: 3px solid #0d99ff;
 }
-
 .section__work input:not(:checked) + label:hover::before {
   opacity: 1;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
   border-bottom: 1px solid #ffffff;
 }
-
-.section__work .work__tabs > input[type="radio"] {
+.section__work .work__tabs > input[type=radio] {
   display: none;
 }
-
 .section__work #tab-motionGraphic:checked ~ #motionGraphic,
 .section__work #tab-art:checked ~ #art {
-  display: -ms-grid;
   display: grid;
 }
-
 .section__work #motionGraphic {
   display: none;
   margin-top: 50px;
   width: 100%;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 25px;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 4;
 }
-
 .section__work #motionGraphic .work__videoContainer > video {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 7px;
 }
-
 .section__work #art {
   display: none;
   margin-top: 50px;
   width: 100%;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 4;
 }
-
 .section__work #art .work__imgContainer img {
   width: 100%;
   height: 100%;
@@ -112,17 +87,14 @@
      object-fit: cover;
   border-radius: 7px;
 }
-
 .section__work #art .work__imgContainer:nth-child(1) {
   grid-column: span 4;
   grid-row: span 2;
 }
-
 .section__work #art .work__imgContainer:nth-child(2),
 .section__work #art .work__imgContainer:nth-child(3) {
   grid-column: span 2;
 }
-
 .section__work #art .work__imgContainer:nth-child(4),
 .section__work #art .work__imgContainer:nth-child(5) {
   grid-column: span 3;
@@ -133,44 +105,26 @@
   padding: 150px 20px 0 20px;
   top: 100vh;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   z-index: -1;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+  filter: brightness(0.8);
 }
-
 .work__background .work__background_left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-
 .work__background #work__background_image1 {
   width: 400px;
   height: auto;
 }
-
 .work__background #work__background_image2 {
   width: 400px;
   height: auto;
 }
-
 .work__background #work__background_image3 {
   width: 400px;
   height: auto;
-}
-/*# sourceMappingURL=work.css.map */
+}/*# sourceMappingURL=work.css.map */
