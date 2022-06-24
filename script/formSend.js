@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 let nameElement = document.querySelector('#name');
 let emailElement = document.querySelector('#email');

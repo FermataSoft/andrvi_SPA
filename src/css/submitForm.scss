@@ -13,7 +13,7 @@
     margin: 50px auto;
     background-color: #151515;
     border-radius: 25px;
-    border: 5px solid $accent-blue;
+    border: 4px solid $accent-blue;
     width: 500px;
     height: 430px;
     padding: 20px 40px;
@@ -38,10 +38,6 @@
         font-size: 1rem;
         left: 10px;
       }
-
-      // &:focus-within label {
-      //   transform: translate(0, 5px) scale(0.8);
-      // }
 
       input {
         border-bottom: 1px solid $gray;
