@@ -45,11 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const input = formReq[i];
       formRemoveError(input);
 
+      checkInputCopyPaste(input);
+
       if (input.classList.contains('_email')) {
         if (emailTest(input)) {
           formAddError(input);
           error++;
-          console.error('Email test falled');
+          console.error('Email test failed');
         }
       } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
         formAddError(input);
@@ -62,6 +64,18 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     return error;
+  }
+
+  function checkInputCopyPaste(input) {
+    let lengthLimit = input.getAttribute('maxlength');
+    let value = input.value;
+    value = 'dfsf';
+
+    input.onchange((e) => {
+      if (input.value >= lengthLimit) {
+        input.value = value.slice(0, lengthLimit - 1);
+      }
+    });
   }
 
   function formAddError(input) {

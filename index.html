@@ -5,10 +5,17 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AndrVi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <title>AndrVi • 3D motion designer</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="src/css/loader.css">
   <link rel="stylesheet" href="src/css/navigation.css">
@@ -257,14 +264,14 @@
                 </div>
               </div>
               <div class="submitForm__item">
-                <input type="text" maxlength="44" id="name" name="name" class="submitForm__itemInput _required"
+                <input type="text" maxlength="50" id="name" name="name" class="submitForm__itemInput _required"
                   placeholder="Full name" />
                 <label for="name">Full name*</label>
               </div>
 
               <div class="submitForm__item">
-                <input type="email" maxlength="44" id="email" name="email" class="submitForm__itemInput _required _email"
-                  placeholder="Email" />
+                <input type="email" maxlength="50" id="email" name="email"
+                  class="submitForm__itemInput _required _email" placeholder="Email" />
                 <label for="email">Email*</label>
               </div>
 
@@ -276,7 +283,7 @@
 
               <div class="checkbox__termsAndConditionsBlock">
                 <input type="checkbox" name="terms-and-conditions" id="temsAndConditions" value="Accept"
-                  class="_required" checked />
+                  class="_required" />
                 <div class="termsAndConditionsBlock__label">
                   <label for="temsAndConditions" class="unselectable">I agree with&nbsp; </label>
                   <a href="#" class="temsAndConditionsLink">terms and conditions*</a>
@@ -324,5 +331,7 @@
 <script src="./script/worksUpload.js"></script>
 <script src="./script/formSend.js"></script>
 <script src="./script/script.js"></script>
+
+<script src="./test/testMaxLength.js"></script>
 
 </html>
