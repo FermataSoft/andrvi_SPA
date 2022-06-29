@@ -69,10 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function checkInputCopyPaste(input) {
     let lengthLimit = input.getAttribute('maxlength');
     let value = input.value;
-    value = 'dfsf';
 
-    input.onchange((e) => {
-      if (input.value >= lengthLimit) {
+    input.addEventListener('change', (e) => {
+      if (input.value.length >= lengthLimit) {
         input.value = value.slice(0, lengthLimit - 1);
       }
     });

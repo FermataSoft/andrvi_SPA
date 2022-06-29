@@ -116,15 +116,15 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
-.work__background #work__background_image1 {
-  width: 400px;
+.work__background #work__background_imageLeft1 {
+  width: 55%;
   height: auto;
 }
-.work__background #work__background_image2 {
-  width: 400px;
+.work__background #work__background_imageLeft2 {
+  width: 55%;
   height: auto;
 }
-.work__background #work__background_image3 {
-  width: 400px;
+.work__background #work__background_imageRight {
+  width: 30%;
   height: auto;
 }/*# sourceMappingURL=work.css.map */

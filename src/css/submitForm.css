@@ -40,6 +40,9 @@
   font-size: 1rem;
   left: 10px;
 }
+.section__submit .submitForm .submitForm__item label::after {
+  content: "*";
+}
 .section__submit .submitForm .submitForm__item input {
   border-bottom: 1px solid #606060;
   width: 100%;
@@ -108,7 +111,7 @@
 .section__submit .submitForm .submitForm__item ._error {
   border-color: red;
 }
-.section__submit .submitForm .checkbox__termsAndConditionsBlock {
+.section__submit .submitForm .submitForm__termsAndConditionsBlock {
   margin: 10px 0;
   display: flex;
   flex-direction: row;
@@ -116,26 +119,29 @@
   justify-self: flex-start;
   align-self: flex-start;
 }
-.section__submit .submitForm .checkbox__termsAndConditionsBlock input[type=checkbox] {
+.section__submit .submitForm .submitForm__termsAndConditionsBlock input[type=checkbox] {
   cursor: pointer;
 }
-.section__submit .submitForm .checkbox__termsAndConditionsBlock input[type=checkbox]._error {
+.section__submit .submitForm .submitForm__termsAndConditionsBlock input[type=checkbox]._error {
   box-shadow: 0 0 3px 1px red;
 }
-.section__submit .submitForm .checkbox__termsAndConditionsBlock label {
+.section__submit .submitForm .submitForm__termsAndConditionsBlock label {
   color: rgb(122, 122, 122);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
 }
-.section__submit .submitForm .checkbox__termsAndConditionsBlock .termsAndConditionsBlock__label {
+.section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label {
   display: inline-flex;
 }
-.section__submit .submitForm .checkbox__termsAndConditionsBlock .termsAndConditionsBlock__label .temsAndConditionsLink {
+.section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label .termsAndConditionsBlock__link {
   color: #0d99ff;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
+}
+.section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label .termsAndConditionsBlock__link::after {
+  content: "*";
 }
 .section__submit .submitForm input[type=submit] {
   align-self: flex-start;

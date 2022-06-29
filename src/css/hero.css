@@ -37,7 +37,7 @@
   left: 50%;
   bottom: 25px;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 3;
 }
 .hero .container_scrollDown a {
   font-family: "Roboto", sans-serif;

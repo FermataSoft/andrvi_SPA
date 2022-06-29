@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .section__work {
   margin-top: 100vh;
@@ -34,7 +34,7 @@
   // }
 
   .work__tabs > label::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -58,7 +58,7 @@
     border-bottom: 1px solid $white;
   }
 
-  .work__tabs > input[type="radio"] {
+  .work__tabs > input[type='radio'] {
     display: none;
   }
 
@@ -133,18 +133,18 @@
     flex-direction: column;
   }
 
-  #work__background_image1 {
-    width: 400px;
+  #work__background_imageLeft1 {
+    width: 55%;
     height: auto;
   }
 
-  #work__background_image2 {
-    width: 400px;
+  #work__background_imageLeft2 {
+    width: 55%;
     height: auto;
   }
 
-  #work__background_image3 {
-    width: 400px;
+  #work__background_imageRight {
+    width: 30%;
     height: auto;
   }
 }

@@ -6,7 +6,7 @@ nav {
   left: 0;
   width: 100%;
   background-color: $navbar;
-  z-index: 9999;
+  z-index: 999;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
 
@@ -150,11 +150,15 @@ nav {
         cursor: pointer;
         transition: all 0.2s;
         position: relative;
+
+        &:hover {
+          transform: translate(0, -2px);
+        }
       }
       .navmenu__menuBtn a::before {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: -2px;
         left: 0;
         width: 100%;
         height: 100%;
@@ -172,7 +176,7 @@ nav {
       }
 
       .navmenu__menuBtn:active {
-        transform: translate(0, 2px);
+        transform: translate(0, 0px);
       }
     }
   }

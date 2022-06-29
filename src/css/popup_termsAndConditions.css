@@ -1,0 +1,101 @@
+/* Main STYLES */
+@font-face {
+  font-family: mellanissa;
+  src: url("../fonts/mellanissa.ttf");
+}
+.termsAndConditions {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 9999;
+  overflow-y: auto;
+  overflow-x: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.termsAndConditions._active {
+  visibility: visible;
+  opacity: 1;
+}
+.termsAndConditions._active .termsAndConditions__block {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.termsAndConditions .termsAndConditions__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  transform: translate(0, -100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content {
+  background-color: rgb(53, 53, 53);
+  width: 80%;
+  height: 100%;
+  padding: 30px;
+  position: relative;
+  border-radius: 10px;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content .termsAndConditions__close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Open-Sans", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  transform: rotate(45deg) scale(1);
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content .termsAndConditions__close:hover {
+  color: #0d99ff;
+  transform: rotate(45deg) scale(1.2);
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content h1 {
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: rgb(242, 242, 242);
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content h2 {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 2rem;
+  color: rgb(242, 242, 242);
+  margin: 2rem 0 1.5rem;
+  text-align: center;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content h3 {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(242, 242, 242);
+  margin: 1rem 0;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content .termsAndConditions__text {
+  color: rgb(242, 242, 242);
+  font-weight: 400;
+  font-family: "Open-Sans", sans-serif;
+  text-align: justify;
+  line-height: 1.2rem;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content ul {
+  margin-top: 1rem;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content ul li {
+  margin-bottom: 1rem;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content a {
+  color: #0d99ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.termsAndConditions .termsAndConditions__block .termsAndConditions__content a:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=popup_termsAndConditions.css.map */
