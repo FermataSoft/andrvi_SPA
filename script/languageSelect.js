@@ -16,6 +16,12 @@ for (let key of $language) {
 function changeLanguage(language) {
   for (let key in langArray) {
     let elem = document.querySelector('.' + key);
-    elem.innerHTML = langArray[key][language];
+    if (elem) {
+      if (elem.getAttribute('value')) {
+        elem.setAttribute('value', langArray[key][language])
+      } else {
+        elem.innerHTML = langArray[key][language];
+      }
+    }
   }
 }

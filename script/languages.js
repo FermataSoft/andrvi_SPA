@@ -148,4 +148,9 @@ export const langArray = {
     en: `Terms and Conditions`,
     ru: `Правила использования сайта`,
   },
+
+  lang_form_submit: {
+    en: `Submit`,
+    ru: `Отправить`,
+  },
 };
