@@ -25,6 +25,11 @@
     justify-content: center;
     z-index: 999999;
 
+    @include breakpoint(xs) {
+      width: 10rem;
+      height: 10rem;
+    }
+
     .face {
       position: absolute;
       border-radius: 50%;

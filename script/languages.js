@@ -39,6 +39,21 @@ export const langArray = {
     ru: `Искусство`,
   },
 
+  lang_news: {
+    en: `News`,
+    ru: `Новости`,
+  },
+
+  lang__news_title_item1: {
+    en: `No news`,
+    ru: `Новостей нет`,
+  },
+
+  lang__news_description_item1: {
+    en: `Please stay tuned:) We update this section as soon as possible.`,
+    ru: `Пожалуйста, оставайтесь с нами:) Мы вскоре обновим этот раздел.`,
+  },
+
   lang_aboutTitle: {
     en: `Project timeline`,
     ru: `Таймлайн проекта`,

@@ -1,22 +1,54 @@
-@import "./variables";
+@import './variables';
 
 .section__about {
   h2 {
     padding-top: $padding_h2;
+
+    @include breakpoint(xs) {
+      padding-top: 55px;
+    }
   }
 
   .container {
     padding-bottom: 50px;
+
+    @include breakpoint(lg) {
+      padding-bottom: 40px;
+    }
+
+    @include breakpoint(xs) {
+      padding-bottom: 20px;
+    }
   }
 
   .timeline__items {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 150px;
     row-gap: 80px;
     padding: 0 45px;
     margin-top: 30px;
     font-family: $font-roboto;
+
+    @include breakpoint(lg) {
+      row-gap: 60px;
+      column-gap: 50px;
+      margin-top: 50px;
+    }
+
+    @include breakpoint(md) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
+      column-gap: 30px;
+      margin-top: 30px;
+    }
+
+    @include breakpoint(xs) {
+      padding: 20px;
+      row-gap: 30px;
+    }
 
     .timeline__item {
       background: $add-dark-blue;
@@ -32,6 +64,15 @@
       position: relative;
       box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
 
+      @include breakpoint(lg) {
+        width: auto;
+      }
+
+      @include breakpoint(xs) {
+        border: 2px solid transparent;
+        height: auto;
+      }
+
       .timeline__item_number {
         position: absolute;
         left: 10px;
@@ -39,6 +80,14 @@
         color: rgba(0, 0, 0, 0.12);
         font-size: 70px;
         font-weight: $font-extraBold;
+
+        @include breakpoint(lg) {
+          font-size: 50px;
+        }
+
+        @include breakpoint(xs) {
+          font-size: 30px;
+        }
       }
 
       .timeline__item_imageMain {
@@ -50,23 +99,55 @@
         z-index: 1;
         clip-path: inset(81px 76px 0px 0px round 10px);
         filter: brightness(0.8);
+
+        @include breakpoint(lg) {
+          width: 200px;
+          height: 200px;
+        }
+
+        @include breakpoint(xs) {
+          width: 120px;
+          height: 120px;
+          top: -50px;
+          right: -50px;
+          clip-path: inset(48px 48px 0px 0px round 10px);
+        }
       }
 
       .timeline__item_imageAdd {
         position: absolute;
         bottom: calc(0% - 125px);
         right: calc(50% - 125px);
-        // transform: translate(-50%, 50%);
         width: 250px;
         height: 250px;
         z-index: 1;
         clip-path: inset(0px 0px 122px 0px);
         filter: brightness(0.8);
+
+        @include breakpoint(lg) {
+          width: 200px;
+          height: 200px;
+          bottom: calc(0% - 100px);
+          right: calc(50% - 100px);
+          clip-path: inset(0px 0px 96px 0px);
+        }
+
+        @include breakpoint(xs) {
+          width: 120px;
+          height: 120px;
+          bottom: calc(0% - 60px);
+          right: calc(50% - 60px);
+          clip-path: inset(0px 0px 57px 0px);
+        }
       }
 
       &:hover {
         border: 3px solid $accent-blue;
         background: $blue-gradient;
+
+        @include breakpoint(xs) {
+          border: 2px solid $accent-blue;
+        }
 
         .timeline__item_imageMain {
           clip-path: inset(0px 0px 0px 0px round 10px);
@@ -92,7 +173,7 @@
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         width: 70px;
         height: 70px;
@@ -102,19 +183,30 @@
         left: 0;
         z-index: -1;
         transition: 0.3s cubic-bezier(0.53, 0.3, 0.62, 0.85);
+
+        @include breakpoint(xs) {
+          width: 40px;
+          height: 40px;
+        }
       }
 
       &:hover::after {
         left: -15px;
       }
 
-      
-
       .h3_accentColor {
         color: $accent-blue;
         font-size: 40px;
         font-weight: $font-bold;
         z-index: 2;
+
+        @include breakpoint(lg) {
+          font-size: 35px;
+        }
+
+        @include breakpoint(xs) {
+          font-size: 16px;
+        }
       }
 
       h3 {
@@ -123,10 +215,22 @@
         text-align: center;
         font-size: 30px;
         z-index: 2;
+
+        @include breakpoint(lg) {
+          font-size: 25px;
+        }
+
+        @include breakpoint(xs) {
+          font-size: 14px;
+        }
       }
 
       h4 {
         z-index: 2;
+
+        @include breakpoint(xs) {
+          font-size: 12px;
+        }
       }
 
       p {
@@ -135,6 +239,14 @@
         color: rgba(255, 255, 255, 0.7);
         text-align: center;
         z-index: 2;
+
+        @include breakpoint(lg) {
+          font-size: 17px;
+        }
+
+        @include breakpoint(xs) {
+          font-size: 10px;
+        }
       }
     }
   }

@@ -37,6 +37,14 @@
     transform: translate(-50%, -50%);
     z-index: 3;
 
+    @include breakpoint(md) {
+      bottom: 10px;
+    }
+
+    @include breakpoint(xs) {
+      bottom: 5px;
+    }
+
     a {
       font-family: $font-roboto;
       font-weight: $font-light;
@@ -50,6 +58,10 @@
         width: auto;
         fill: $white;
         opacity: 0.8;
+
+        @include breakpoint(xs) {
+          height: 25px;
+        }
 
         .mouse__wheel {
           animation: scrollEffect 0.4s ease-out 0s infinite alternate;
@@ -69,6 +81,10 @@
       .scrollDownTitle {
         opacity: 0.7;
         color: $white;
+
+        @include breakpoint(xs) {
+          font-size: 0.7rem;
+        }
       }
     }
   }

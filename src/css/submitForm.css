@@ -11,6 +11,11 @@
 .section__submit h2 {
   padding-top: 80px;
 }
+@media (max-width: 500px) {
+  .section__submit h2 {
+    padding-top: 20px;
+  }
+}
 .section__submit .submitForm {
   margin: 50px auto;
   background-color: #151515;
@@ -24,6 +29,20 @@
   justify-content: center;
   align-items: center;
   row-gap: 5px;
+}
+@media (max-width: 630px) {
+  .section__submit .submitForm {
+    width: 98%;
+    height: auto;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #0d99ff;
+  }
+}
+@media (max-width: 500px) {
+  .section__submit .submitForm {
+    max-width: 10px auto;
+  }
 }
 .section__submit .submitForm .submitForm__item {
   width: 100%;
@@ -39,6 +58,11 @@
   color: #6f81a5;
   font-size: 1rem;
   left: 10px;
+}
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__item label {
+    font-size: 0.7rem;
+  }
 }
 .section__submit .submitForm .submitForm__item label::after {
   content: "*";
@@ -57,6 +81,16 @@
   box-shadow: none;
   transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__item input {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__item input {
+    height: 35px;
+  }
+}
 .section__submit .submitForm .submitForm__item textarea {
   margin-top: 23px;
   padding: 0px 10px 4px 10px;
@@ -68,6 +102,16 @@
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 1rem;
+}
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__item textarea {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__item textarea {
+    height: 4rem;
+  }
 }
 .section__submit .submitForm .submitForm__item input::-moz-placeholder, .section__submit .submitForm .submitForm__item textarea::-moz-placeholder {
   color: transparent;
@@ -88,6 +132,18 @@
 .section__submit .submitForm .submitForm__item input:placeholder-shown + label,
 .section__submit .submitForm .submitForm__item textarea:placeholder-shown + label {
   transform: translate(0, 23px) scale(1);
+}
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__item input:-moz-placeholder-shown + label, .section__submit .submitForm .submitForm__item textarea:-moz-placeholder-shown + label {
+    transform: translate(0, 12px) scale(1);
+  }
+  .section__submit .submitForm .submitForm__item input:-ms-input-placeholder + label, .section__submit .submitForm .submitForm__item textarea:-ms-input-placeholder + label {
+    transform: translate(0, 12px) scale(1);
+  }
+  .section__submit .submitForm .submitForm__item input:placeholder-shown + label,
+.section__submit .submitForm .submitForm__item textarea:placeholder-shown + label {
+    transform: translate(0, 12px) scale(1);
+  }
 }
 .section__submit .submitForm .submitForm__item input:not(:-moz-placeholder-shown) + label, .section__submit .submitForm .submitForm__item textarea:not(:-moz-placeholder-shown) + label {
   transform: translate(0, 5px) scale(0.8);
@@ -131,14 +187,29 @@
   font-weight: 400;
   font-size: 0.8rem;
 }
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__termsAndConditionsBlock label {
+    font-size: 0.6rem;
+  }
+}
 .section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label {
   display: inline-flex;
+}
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label {
+    flex-wrap: wrap;
+  }
 }
 .section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label .termsAndConditionsBlock__link {
   color: #0d99ff;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
+}
+@media (max-width: 500px) {
+  .section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label .termsAndConditionsBlock__link {
+    font-size: 0.6rem;
+  }
 }
 .section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label .termsAndConditionsBlock__link::after {
   content: "*";

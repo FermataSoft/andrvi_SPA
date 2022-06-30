@@ -39,6 +39,16 @@
   transform: translate(-50%, -50%);
   z-index: 3;
 }
+@media (max-width: 820px) {
+  .hero .container_scrollDown {
+    bottom: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .hero .container_scrollDown {
+    bottom: 5px;
+  }
+}
 .hero .container_scrollDown a {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -52,6 +62,11 @@
   width: auto;
   fill: #ffffff;
   opacity: 0.8;
+}
+@media (max-width: 500px) {
+  .hero .container_scrollDown a svg {
+    height: 25px;
+  }
 }
 .hero .container_scrollDown a svg .mouse__wheel {
   -webkit-animation: scrollEffect 0.4s ease-out 0s infinite alternate;
@@ -76,4 +91,9 @@
 .hero .container_scrollDown a .scrollDownTitle {
   opacity: 0.7;
   color: #ffffff;
+}
+@media (max-width: 500px) {
+  .hero .container_scrollDown a .scrollDownTitle {
+    font-size: 0.7rem;
+  }
 }/*# sourceMappingURL=hero.css.map */

@@ -3,16 +3,22 @@
 .section__work {
   margin-top: 100vh;
 
-  h2 {
-    padding-top: 60px;
-    margin: 0 0 30px 0;
-  }
-
   .work__tabs {
     width: 100%;
     padding-top: 80px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @include breakpoint(sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @include breakpoint(xs) {
+      gap: 0;
+      padding-top: 55px;
+    }
   }
 
   .work__tabs > label {
@@ -25,13 +31,19 @@
     font-weight: $font-medium;
     color: $white;
     text-align: center;
-  }
 
-  // @media (max-width: 860px) {
-  //   .work__tabs > label {
-  //     margin-right: 100px;
-  //   }
-  // }
+    @include breakpoint(md) {
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 1rem;
+    }
+  }
 
   .work__tabs > label::before {
     content: '';
@@ -63,8 +75,14 @@
   }
 
   #tab-motionGraphic:checked ~ #motionGraphic,
-  #tab-art:checked ~ #art {
+  #tab-art:checked ~ #art,
+  #tab-news:checked ~ #news {
     display: grid;
+
+    @include breakpoint(md) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   #motionGraphic {
@@ -75,6 +93,14 @@
     grid-gap: 25px;
     grid-column-start: 1;
     grid-column-end: 4;
+
+    @include breakpoint(md) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(sm) {
+      grid-gap: 10px;
+    }
 
     .work__videoContainer > video {
       width: 100%;
@@ -114,6 +140,66 @@
       grid-column: span 3;
     }
   }
+
+  #news {
+    display: none;
+    margin-top: 50px;
+    width: 100%;
+    grid-gap: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    .work__newsContainer {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding: 20px;
+      background-color: $navbar_opacity;
+
+      @include breakpoint(md) {
+        justify-content: center;
+      }
+
+      .news__item {
+        position: relative;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 300px;
+        height: 250px;
+        padding: 25px;
+        background-color: rgba(240, 240, 240, 0.85);
+        border-radius: 10px;
+
+        @include breakpoint(md) {
+          flex-basis: 220px;
+        }
+
+        .news__title {
+          text-align: center;
+          color: #000;
+        }
+
+        .news__description {
+          text-align: center;
+        }
+
+        img {
+          position: absolute;
+          left: 50%;
+          bottom: 25px;
+          transform: translate(-50%, 0);
+        }
+
+        .news__item_date {
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+        }
+      }
+    }
+  }
 }
 
 .work__background {
@@ -127,24 +213,48 @@
   z-index: -1;
   filter: brightness(0.8); // Britness of background images
 
+  @include breakpoint(md) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+  }
+
   .work__background_left {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+
+    @include breakpoint(xs) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 100px;
+    }
   }
 
   #work__background_imageLeft1 {
     width: 55%;
     height: auto;
+
+    @include breakpoint(xs) {
+      width: 80%;
+    }
   }
 
   #work__background_imageLeft2 {
     width: 55%;
     height: auto;
+
+    @include breakpoint(xs) {
+      width: 80%;
+    }
   }
 
   #work__background_imageRight {
     width: 30%;
     height: auto;
+
+    @include breakpoint(md) {
+      width: 80%;
+    }
   }
 }

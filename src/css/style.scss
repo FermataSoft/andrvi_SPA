@@ -39,6 +39,10 @@ h6 {
 // GLOBAL
 html {
   scroll-behavior: smooth;
+
+  @include breakpoint(md) {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -46,6 +50,10 @@ body {
   max-width: 100%;
   background: $app-background-color;
   font-family: $font-roboto;
+
+  &._locked {
+    overflow: hidden;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -83,12 +91,24 @@ h1 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  @include breakpoint(md) {
+    font-size: 50px;
+  }
 }
 
 h2 {
   font-size: 60px;
   font-weight: $font-bold;
   color: $white;
+
+  @include breakpoint(md) {
+    font-size: 40px;
+  }
+
+  @include breakpoint(sm) {
+      font-size: 25px;
+  }
 }
 
 .h2_accentColor {
@@ -99,6 +119,14 @@ h3 {
   font-size: 30px;
   font-weight: $font-medium;
   color: $white;
+
+  @include breakpoint(md) {
+    font-size: 22px;
+  }
+
+  @include breakpoint(sm) {
+      font-size: 16px;
+  }
 }
 
 h4 {
@@ -106,6 +134,10 @@ h4 {
   font-weight: $font-medium;
   color: $white;
   text-align: center;
+
+  @include breakpoint(md) {
+    font-size: 22px;
+  }
 }
 
 .container {
@@ -113,6 +145,15 @@ h4 {
   margin: 0px auto;
   padding: 0 10px;
   overflow: hidden;
+
+  @include breakpoint(lg) {
+    max-width: 900px;
+    padding: 0 20px;
+  }
+
+  @include breakpoint(md) {
+    max-width: 85%;
+  }
 }
 
 // STATES
@@ -156,11 +197,24 @@ main {
   margin: 0 auto 20px auto;
   justify-content: center;
 
+  @include breakpoint(sm) {
+      flex-wrap: wrap;
+      margin: 0 auto 5px auto;;
+  }
+
   a {
     width: 80px;
     display: flex;
-    justify-content: center;    
-    
+    justify-content: center;
+
+    @include breakpoint(lg) {
+      width: 60px;
+    }
+
+    @include breakpoint(sm) {
+      width: 40px;
+    }
+
     &:hover svg {
       color: $accent-blue;
       transform: translateY(-2px);
@@ -170,12 +224,22 @@ main {
       transform: translateY(0px);
     }
   }
-  
+
   svg {
     width: 50px;
     height: 50px;
-    color: #ffffff;
-    transition: color .3s ease, transform .2s ease-in-out;
+    color: $links;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+
+    @include breakpoint(lg) {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include breakpoint(sm) {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 
@@ -187,8 +251,13 @@ footer {
   display: flex;
   justify-content: center;
   padding: 10px 0;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-weight: $font-light;
+  text-align: center;
+
+  @include breakpoint(sm) {
+      font-size: 0.6rem;
+  }
 }
 
 // @media only screen and (min-width: 400px) {
@@ -197,44 +266,40 @@ footer {
 //   }
 // }
 
-.mobile__attention {
-  display: none;
-}
+// @media only screen and (max-width: $mobile-attention) {
+//   body {
+//     overflow: hidden;
+//   }
 
-@media only screen and (max-width: $mobile-attention) {
-  body {
-    overflow: hidden;
-  }
+//   .mobile__attention {
+//     position: fixed;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding-top: 50px;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100vh;
+//     background: $blue-gradient;
+//     z-index: 999999;
 
-  .mobile__attention {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: $blue-gradient;
-    z-index: 999999;
+//     h1 {
+//       font-size: 5rem;
+//       text-align: center;
+//       margin-bottom: 50px;
+//     }
 
-    h1 {
-      font-size: 5rem;
-      text-align: center;
-      margin-bottom: 50px;
-    }
+//     p {
+//       color: #ffffff;
+//       text-align: center;
+//       font-size: 1.2rem;
+//     }
 
-    p {
-      color: #ffffff;
-      text-align: center;
-      font-size: 1.2rem;
-    }
-
-    img {
-      margin-top: 50px;
-      width: 50%;
-      height: auto;
-    }
-  }
-}
+//     img {
+//       margin-top: 50px;
+//       width: 50%;
+//       height: auto;
+//     }
+//   }
+// }

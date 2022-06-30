@@ -3,10 +3,12 @@ $padding_h2: 80px;
 
 // COLORS
 $app-background-color: #000000;
-$navbar: rgba(11, 11, 14, 0.8);
+$navbar_opacity: rgba(11, 11, 14, 0.8);
+$navbar: rgba(11, 11, 14);
 $dark: #050d21;
 $white: #ffffff;
 $gray: #606060;
+$links: rgb(242, 242, 242);
 $accent-blue: #0d99ff;
 $accent-blue-hover: #0b74bf;
 $add-dark-blue: linear-gradient(252.85deg, #0e0e25 0%, #0e0e25 100%);
@@ -14,8 +16,8 @@ $add-dark-blue: linear-gradient(252.85deg, #0e0e25 0%, #0e0e25 100%);
 $blue-gradient: linear-gradient(252.85deg, #004272 0%, #47007a 100%);
 
 // FONTS
-$font-roboto: "Roboto", sans-serif;
-$font-openSans: "Open-Sans", sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-openSans: 'Open-Sans', sans-serif;
 $font-light: 300;
 $font-regular: 400;
 $font-medium: 500;
@@ -28,3 +30,19 @@ $font-extraBold: 800;
 }
 
 $mobile-attention: 500px;
+$mobile: 767px;
+
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (max-width: 1250px) {@content;}
+  }
+  @if $point == md {
+    @media (max-width: 820px) {@content;}
+  }
+  @if $point == sm {
+    @media (max-width: 630px) {@content;}
+  }
+  @if $point == xs {
+    @media (max-width: 500px) {@content;}
+  }
+}

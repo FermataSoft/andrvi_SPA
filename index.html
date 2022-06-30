@@ -42,15 +42,6 @@
     </div>
   </div>
 
-  <div class="mobile__attention">
-    <h1>Sorry</h1>
-    <p>We are working on mobile and adaptive version of AndrVi's official page.</p>
-    <p>Please stay tuned and go to this page on desktop!</p>
-    <img class="mobile__attention_image"
-      src="https://media1.giphy.com/media/toXKzaJP3WIgM/giphy.gif?cid=790b7611484a5699a19a263bab6101cf0c307c45e76332fa&rid=giphy.gif&ct=g"
-      alt="">
-  </div>
-
   <main>
     <header class="navigation unselectable">
       <nav>
@@ -64,7 +55,11 @@
               <label for="ru" class="navmenu__langSelector">RU</label>
             </div>
 
-            <div class="navmenu">
+            <div class="navmenu__burger">
+              <span></span>
+            </div>
+
+            <div class="navmenu__block">
               <a href="https://t.me/av_andrvi" class="navmenu__contactBtn lang_nav_contactMe" target="_blank">Contact
                 me</a>
               <ul class="navmenu__items">
@@ -119,7 +114,8 @@
           <label for="tab-motionGraphic" class="lang_motionGraphic unselectable">Motion Graphic</label>
           <input type="radio" name="tab-btn" id="tab-art" />
           <label for="tab-art" class="lang_art unselectable">Art</label>
-          <label for="#"></label>
+          <input type="radio" name="tab-btn" id="tab-news">
+          <label for="tab-news" class="lang_news unselectable">News</label>
 
           <div id="motionGraphic" class="work__contentBlock">
             <div class="work__videoContainer">
@@ -157,6 +153,19 @@
             </div>
             <div class="work__imgContainer">
               <img src="./src/works/art/Human_1_2.png" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div id="news" class="work__contentBlock">
+            <div class="work__newsContainer">
+              <div class="news__item">
+                <h3 class="news__title lang__news_title_item1">No news</h3>
+                <p class="news__description lang__news_description_item1">Please stay tuned:) We update this section as
+                  soon as possible.</p>
+                <img
+                  src="data:image/png;base64,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">
+                <span class="news__item_date">30/06/2022</span>
+              </div>
             </div>
           </div>
         </div>
@@ -347,8 +356,8 @@
 
           </a>
           <a href="https://t.me/av_andrvi" id="telegram" target="_blank">
-            <svg class="svg_telegram" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48"
-              style="fill:currentColor">
+            <svg class="svg_telegram" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+              viewBox="0 0 48 48" style="fill:currentColor">
               <path fill="currentColor" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
 
               <path fill="rgb(0, 0, 0, 0.75)"
@@ -365,8 +374,8 @@
             </svg>
           </a>
           <a href="https://twitter.com/av_andrvi" id="twitter" target="_blank">
-            <svg class="svg_twitter" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30"
-              style=" fill:currentColor;">
+            <svg class="svg_twitter" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+              viewBox="0 0 30 30" style=" fill:currentColor;">
               <path
                 d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M21.464,12.535 c0.006,0.133,0.009,0.265,0.009,0.397c0,4.068-3.095,8.756-8.756,8.756c-1.739,0-3.356-0.509-4.717-1.383 c0.241,0.029,0.486,0.042,0.735,0.042c1.443,0,2.769-0.491,3.821-1.318c-1.347-0.025-2.484-0.915-2.875-2.137 c0.188,0.036,0.381,0.055,0.579,0.055c0.281,0,0.554-0.038,0.811-0.108c-1.408-0.282-2.469-1.526-2.469-3.017 c0-0.013,0-0.026,0-0.039c0.415,0.231,0.889,0.369,1.394,0.385c-0.825-0.551-1.369-1.494-1.369-2.561 c0-0.565,0.151-1.094,0.416-1.547c1.518,1.862,3.786,3.088,6.343,3.216c-0.052-0.225-0.079-0.46-0.079-0.701 c0-1.699,1.378-3.078,3.077-3.078c0.885,0,1.685,0.374,2.246,0.972c0.701-0.139,1.36-0.394,1.955-0.747 c-0.23,0.719-0.718,1.321-1.354,1.703c0.622-0.074,1.215-0.239,1.768-0.484C22.588,11.559,22.067,12.1,21.464,12.535z">
               </path>
@@ -702,6 +711,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="./script/pageLoader.js"></script>
 <script src="./script/animation.js"></script>
+<script src="./script/navigation_mobile.js"></script>
 <script src="./script/worksUpload.js"></script>
 <script src="./script/formSend.js"></script>
 <script type="module" src="./script/languageSelect.js"></script>

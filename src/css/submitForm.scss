@@ -7,6 +7,10 @@
 
   h2 {
     padding-top: $padding_h2;
+
+    @include breakpoint(xs) {
+          padding-top: 20px;
+    }
   }
 
   .submitForm {
@@ -23,6 +27,18 @@
     align-items: center;
     row-gap: 5px;
 
+    @include breakpoint(sm) {
+      width: 98%;
+      height: auto;
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid $accent-blue;
+    }
+
+    @include breakpoint(xs) {
+      max-width: 10px auto;
+    }
+
     .submitForm__item {
       width: 100%;
       position: relative;
@@ -37,6 +53,10 @@
         color: #6f81a5;
         font-size: 1rem;
         left: 10px;
+
+        @include breakpoint(xs) {
+          font-size: 0.7rem;
+        }
 
         &::after {
           content: '*';
@@ -56,6 +76,14 @@
         outline: none;
         box-shadow: none;
         transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
+
+        @include breakpoint(xs) {
+          font-size: 0.7rem;
+        }
+
+        @include breakpoint(xs) {
+          height: 35px;
+        }
       }
 
       & textarea {
@@ -69,6 +97,14 @@
         font-family: $font-roboto;
         font-weight: $font-light;
         font-size: 1rem;
+
+        @include breakpoint(xs) {
+          font-size: 0.7rem;
+        }
+
+        @include breakpoint(xs) {
+          height: 4rem;
+        }
       }
 
       // Floating label
@@ -80,6 +116,10 @@
       input:placeholder-shown + label,
       textarea:placeholder-shown + label {
         transform: translate(0, 23px) scale(1);
+
+        @include breakpoint(xs) {
+          transform: translate(0, 12px) scale(1);
+        }
       }
 
       input:not(:placeholder-shown) + label,
@@ -124,16 +164,28 @@
         font-family: $font-roboto;
         font-weight: $font-regular;
         font-size: 0.8rem;
+
+        @include breakpoint(xs) {
+          font-size: 0.6rem;
+        }
       }
 
       .termsAndConditionsBlock__label {
         display: inline-flex;
+
+        @include breakpoint(xs) {
+          flex-wrap: wrap;
+        }
 
         .termsAndConditionsBlock__link {
           color: $accent-blue;
           font-family: $font-roboto;
           font-weight: $font-regular;
           font-size: 0.8rem;
+
+          @include breakpoint(xs) {
+            font-size: 0.6rem;
+          }
 
           &::after {
             content: '*';

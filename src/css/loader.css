@@ -28,6 +28,12 @@
   justify-content: center;
   z-index: 999999;
 }
+@media (max-width: 500px) {
+  .loader .loader__animation {
+    width: 10rem;
+    height: 10rem;
+  }
+}
 .loader .loader__animation .face {
   position: absolute;
   border-radius: 50%;
