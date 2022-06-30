@@ -64,7 +64,7 @@ nav .navmenu__contactBtn::after {
   z-index: 1;
   opacity: 0;
   transform: scale(1, 1);
-  transition: 0.3s all ease-out;
+  transition: 0.3s all ease-in-out;
   transition-delay: 0.2s;
 }
 nav .navmenu__contactBtn:hover::after {
@@ -96,7 +96,7 @@ nav .navmenu__body .selector_lang .navmenu__langSelector {
   color: #ffffff;
   border: none;
   cursor: pointer;
-  transition: all 0.1s;
+  transition: all 0.1s ease-in-out;
   position: relative;
 }
 nav .navmenu__body .selector_lang .navmenu__langSelector:active {
@@ -150,7 +150,7 @@ nav .navmenu__body .navmenu .navmenu__menuBtn a::before {
   height: 100%;
   z-index: 1;
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   border-bottom: 2px solid #0d99ff;
   transform: scale(0.1, 1);
 }
