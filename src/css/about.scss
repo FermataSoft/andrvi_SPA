@@ -110,7 +110,7 @@
           height: 120px;
           top: -50px;
           right: -50px;
-          clip-path: inset(48px 48px 0px 0px round 10px);
+          clip-path: inset(48px 47px 0px 0px round 10px);
         }
       }
 
@@ -137,7 +137,7 @@
           height: 120px;
           bottom: calc(0% - 60px);
           right: calc(50% - 60px);
-          clip-path: inset(0px 0px 57px 0px);
+          clip-path: inset(0px 0px 58px 0px);
         }
       }
 
@@ -185,13 +185,18 @@
         transition: 0.3s cubic-bezier(0.53, 0.3, 0.62, 0.85);
 
         @include breakpoint(xs) {
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
         }
       }
 
       &:hover::after {
         left: -15px;
+
+        @include breakpoint(xs) {
+          left: -7px;
+        }
       }
 
       .h3_accentColor {

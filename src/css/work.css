@@ -213,7 +213,12 @@
   .work__background {
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    gap: 120px;
+  }
+}
+@media (max-width: 500px) {
+  .work__background {
+    gap: 150px;
   }
 }
 .work__background .work__background_left {
@@ -225,12 +230,18 @@
   .work__background .work__background_left {
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    gap: 150px;
   }
 }
 .work__background #work__background_imageLeft1 {
   width: 55%;
   height: auto;
+}
+@media (min-width: 2000px) {
+  .work__background #work__background_imageLeft1 {
+    width: 80%;
+    height: auto;
+  }
 }
 @media (max-width: 500px) {
   .work__background #work__background_imageLeft1 {
@@ -240,6 +251,12 @@
 .work__background #work__background_imageLeft2 {
   width: 55%;
   height: auto;
+}
+@media (min-width: 2000px) {
+  .work__background #work__background_imageLeft2 {
+    width: 100%;
+    height: auto;
+  }
 }
 @media (max-width: 500px) {
   .work__background #work__background_imageLeft2 {

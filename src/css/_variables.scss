@@ -33,6 +33,9 @@ $mobile-attention: 500px;
 $mobile: 767px;
 
 @mixin breakpoint($point) {
+  @if $point == xl {
+    @media (min-width: 2000px) {@content;}
+  }
   @if $point == lg {
     @media (max-width: 1250px) {@content;}
   }

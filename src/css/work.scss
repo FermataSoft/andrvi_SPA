@@ -216,7 +216,11 @@
   @include breakpoint(md) {
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    gap: 120px;
+  }
+
+  @include breakpoint(xs) {
+    gap: 150px;
   }
 
   .work__background_left {
@@ -227,13 +231,18 @@
     @include breakpoint(xs) {
       flex-direction: column;
       justify-content: center;
-      gap: 100px;
+      gap: 150px;
     }
   }
 
   #work__background_imageLeft1 {
     width: 55%;
     height: auto;
+
+    @include breakpoint(xl) {
+      width: 80%;
+      height: auto;
+    }
 
     @include breakpoint(xs) {
       width: 80%;
@@ -243,6 +252,11 @@
   #work__background_imageLeft2 {
     width: 55%;
     height: auto;
+
+    @include breakpoint(xl) {
+      width: 100%;
+      height: auto;
+    }
 
     @include breakpoint(xs) {
       width: 80%;

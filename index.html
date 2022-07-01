@@ -28,18 +28,18 @@
 </head>
 
 <body>
-  <div class="loader">
-    <div class="loader__animation">
-      <div class="face">
-        <div class="circle"></div>
-      </div>
-      <div class="face">
-        <div class="circle"></div>
-      </div>
-      <div class="face">
-        <div class="circle"></div>
-      </div>
+  <div class="loader unselectable"">
+    <div class=" loader__animation">
+    <div class="face">
+      <div class="circle"></div>
     </div>
+    <div class="face">
+      <div class="circle"></div>
+    </div>
+    <div class="face">
+      <div class="circle"></div>
+    </div>
+  </div>
   </div>
 
   <main>
@@ -81,7 +81,7 @@
         </div>
 
         <video autoplay loop muted preload="auto" id="hero__video">
-          <source src="./src/video/header/showreel_low_compessed.mp4" type="video/mp4" />
+          <source src="./src/video/header/showreel_large.mp4" type="video/mp4" />
         </video>
 
         <div class="container_scrollDown">
@@ -107,52 +107,78 @@
       </div>
     </div>
 
-    <section id="work" class="section__work pSection">
+    <section id="work" class="section__work pSection unselectable">
       <div class="container">
         <div class="work__tabs pContent">
           <input type="radio" name="tab-btn" id="tab-motionGraphic" checked />
-          <label for="tab-motionGraphic" class="lang_motionGraphic unselectable">Motion Graphic</label>
+          <label for="tab-motionGraphic" class="lang_motionGraphic">Motion Graphic</label>
           <input type="radio" name="tab-btn" id="tab-art" />
-          <label for="tab-art" class="lang_art unselectable">Art</label>
+          <label for="tab-art" class="lang_art">Art</label>
           <input type="radio" name="tab-btn" id="tab-news">
-          <label for="tab-news" class="lang_news unselectable">News</label>
+          <label for="tab-news" class="lang_news">News</label>
 
           <div id="motionGraphic" class="work__contentBlock">
             <div class="work__videoContainer">
-              <video loop muted poster="./src/works/motion graphic/poster/1_low.png" onmouseover="this.play()"
+              <video loop muted poster="./src/works/motion graphic/poster/poster_MW.webp" onmouseover="this.play()"
                 onmouseout="this.load();this.currentTime=0;">
-                <source src="./src/works/motion graphic/MW_preview_compressed.mp4" type="video/mp4" />
+                <source src="./src/works/motion graphic/MW_preview_mobile.m4v" type="video/mp4" />
               </video>
             </div>
+
             <div class="work__videoContainer">
-              <video loop muted poster="./src/works/motion graphic/poster/2_low.png" onmouseover="this.play()"
-                onmouseout="this.load();this.currentTime=0;">
-                <source src="./src/works/motion graphic/telegram_preview_compressed.mp4" type="video/mp4" />
+              <video loop muted poster="./src/works/motion graphic/poster/poster_telegram.webp"
+                onmouseover="this.play()" onmouseout="this.load();this.currentTime=0;">
+                <source src="./src/works/motion graphic/telegram_preview_mobile.m4v" type="video/mp4" />
               </video>
             </div>
+
             <div class="work__videoContainer">
-              <video loop muted poster="./src/works/motion graphic/poster/4_low.png" onmouseover="this.play()"
+              <video loop muted poster="./src/works/motion graphic/poster/poster_coffee.webp" onmouseover="this.play()"
                 onmouseout="this.load();this.currentTime=0;">
-                <source src="./src/works/motion graphic/coffee_preview_compressed.mp4" type="video/mp4" />
+                <source src="./src/works/motion graphic/coffee_preview_mobile.m4v" type="video/mp4" />
               </video>
             </div>
           </div>
 
           <div id="art" class="work__contentBlock">
             <div class="work__imgContainer">
-              <img src="./src/works/art/Female balett final.png" alt="" loading="lazy" />
+              <img srcset="./src/works/art/Female_balett@640.webp 640w,
+                           ./src/works/art/Female_balett@720.webp 720w,
+                           ./src/works/art/Female_balett@1080.webp 1080w"
+                sizes="(max-width: 820px) calc(100vw-163px), (max-width: 1250px) 570px, 783px"
+                src="./src/works/art/Female_balett@1080.webp" alt="Art image" loading="lazy" />
             </div>
+
             <div class="work__imgContainer">
-              <img src="./src/works/art/Female points.png" alt="" loading="lazy" />
+              <img srcset="./src/works/art/Female_points@640.webp 640w, 
+                           ./src/works/art/Female_points@720.webp 720w, 
+                           ./src/works/art/Female_points@1080.webp 1080w"
+                sizes="(max-width: 820px) calc(100vw-163px), (max-width: 1250px) 570px, 783px"
+                src="./src/works/art/Female_points@1080.webp" alt="Art image" loading="lazy" />
             </div>
+
             <div class="work__imgContainer">
-              <img src="./src/works/art/Focusrite.png" alt="" loading="lazy" />
+              <img srcset="./src/works/art/Focusrite@640.webp 640w,
+                           ./src/works/art/Focusrite@720.webp 720w,
+                           ./src/works/art/Focusrite@1080.webp 1080w"
+                sizes="(max-width: 820px) calc(100vw-163px), (max-width: 1250px) 570px, 783px"
+                src="./src/works/art/Focusrite@1080.webp" alt="Art image" loading="lazy" />
             </div>
+
             <div class="work__imgContainer">
-              <img src="./src/works/art/Halloween ready.png" alt="" loading="lazy" />
+              <img srcset="./src/works/art/Halloween@640.webp 640w,
+                           ./src/works/art/Halloween@720.webp 720w,
+                           ./src/works/art/Halloween@1080.webp 1080w"
+                sizes="(max-width: 820px) calc(100vw-163px), (max-width: 1250px) 570px, 783px"
+                src="./src/works/art/Halloween@1080.webp" alt="Art image" loading="lazy" />
             </div>
+
             <div class="work__imgContainer">
-              <img src="./src/works/art/Human_1_2.png" alt="" loading="lazy" />
+              <img srcset="./src/works/art/Human@640.webp 640w,
+                           ./src/works/art/Human@720.webp 720w,
+                           ./src/works/art/Human@1080.webp 1080w"
+                sizes="(max-width: 820px) calc(100vw-163px), (max-width: 1250px) 570px, 783px"
+                src="./src/works/art/Human@1080.webp" alt="Art image" loading="lazy" />
             </div>
           </div>
 
@@ -164,7 +190,7 @@
                   soon as possible.</p>
                 <img
                   src="data:image/png;base64,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">
-                <span class="news__item_date">30/06/2022</span>
+                <span class="news__item_date unselectable">30/06/2022</span>
               </div>
             </div>
           </div>
@@ -173,73 +199,73 @@
 
       <div class="work__background pImage">
         <div class="work__background_left">
-          <img id="work__background_imageLeft1" src="./src/images/background/Page_BG_2.png" alt="backgroundImage"
+          <img id="work__background_imageLeft1" src="./src/images/background/Page_BG_2.webp" alt="backgroundImage"
             width="500px" height="auto">
-          <img id="work__background_imageLeft2" src="./src/images/background/Page_BG_3.png" alt="backgroundImage"
+          <img id="work__background_imageLeft2" src="./src/images/background/Page_BG_3.webp" alt="backgroundImage"
             width="500px" height="auto">
         </div>
 
-        <img id="work__background_imageRight" src="./src/images/background/Page_BG_1.png" alt="backgroundImage"
+        <img id="work__background_imageRight" src="./src/images/background/Page_BG_1.webp" alt="backgroundImage"
           width="500px" height="auto">
       </div>
     </section>
 
-    <div id="about" class="section__about">
+    <div id="about" class="section__about unselectable">
       <div class="container">
         <div>
           <h2 class="lang_aboutTitle">Project timeline</h2>
           <div class="timeline__items">
             <div class="timeline__item">
-              <span class="timeline__item_number unselectable">01</span>
-              <img class="timeline__item_imageMain unselectable" src="./src/images/background/Site_1_1.png" alt="">
-              <img class="timeline__item_imageAdd unselectable" src="./src/images/background/Site_1_2.png" alt="">
-              <h3 class="h3_accentColor lang_step1 unselectable">Step 1</h3>
-              <h4 class="lang_step1_title unselectable">Art-direction</h4>
-              <p class="lang_step1_text unselectable">
+              <span class="timeline__item_number">01</span>
+              <img class="timeline__item_imageMain" src="./src/images/background/tl_item1_main.webp" alt="">
+              <img class="timeline__item_imageAdd" src="./src/images/background/tl_item1_add.webp" alt="">
+              <h3 class="h3_accentColor lang_step1">Step 1</h3>
+              <h4 class="lang_step1_title">Art-direction</h4>
+              <p class="lang_step1_text">
                 Concept development, creating moodboard with references
               </p>
             </div>
 
             <div class="timeline__item">
-              <span class="timeline__item_number unselectable">02</span>
-              <img class="timeline__item_imageMain unselectable" src="./src/images/background/Site_2_1.png" alt="">
-              <img class="timeline__item_imageAdd unselectable" src="./src/images/background/Site_2_2.png" alt="">
-              <h3 class="h3_accentColor lang_step2 unselectable">Step 2</h3>
-              <h4 class="lang_step2_title unselectable">Blocking</h4>
-              <p class="lang_step2_text unselectable">
+              <span class="timeline__item_number">02</span>
+              <img class="timeline__item_imageMain" src="./src/images/background/tl_item2_main.webp" alt="">
+              <img class="timeline__item_imageAdd" src="./src/images/background/tl_item2_add.webp" alt="">
+              <h3 class="h3_accentColor lang_step2">Step 2</h3>
+              <h4 class="lang_step2_title">Blocking</h4>
+              <p class="lang_step2_text">
                 Basic animations with primitive figures
               </p>
             </div>
 
             <div class="timeline__item">
-              <span class="timeline__item_number unselectable">03</span>
-              <img class="timeline__item_imageMain unselectable" src="./src/images/background/Site_3_1.png" alt="">
-              <img class="timeline__item_imageAdd unselectable" src="./src/images/background/Site_3_2.png" alt="">
-              <h3 class="h3_accentColor lang_step3 unselectable">Step 3</h3>
-              <h4 class="lang_step3_title unselectable">Assets</h4>
-              <p class="lang_step3_text unselectable">
+              <span class="timeline__item_number">03</span>
+              <img class="timeline__item_imageMain" src="./src/images/background/tl_item3_main.webp" alt="">
+              <img class="timeline__item_imageAdd" src="./src/images/background/tl_item3_add.webp" alt="">
+              <h3 class="h3_accentColor lang_step3">Step 3</h3>
+              <h4 class="lang_step3_title">Assets</h4>
+              <p class="lang_step3_text">
                 Filling the scene in with assets, simulations, final animations
               </p>
             </div>
 
             <div class="timeline__item">
-              <span class="timeline__item_number unselectable">04</span>
-              <img class="timeline__item_imageMain unselectable" src="./src/images/background/Site_4_1.png" alt="">
-              <img class="timeline__item_imageAdd unselectable" src="./src/images/background/Site_4_2.png" alt="">
-              <h3 class="h3_accentColor lang_step4 unselectable">Step 4</h3>
-              <h4 class="lang_step4_title unselectable">Lookdeving</h4>
-              <p class="lang_step4_text unselectable">
+              <span class="timeline__item_number">04</span>
+              <img class="timeline__item_imageMain" src="./src/images/background/tl_item4_main.webp" alt="">
+              <img class="timeline__item_imageAdd" src="./src/images/background/tl_item4_add.webp" alt="">
+              <h3 class="h3_accentColor lang_step4">Step 4</h3>
+              <h4 class="lang_step4_title">Lookdeving</h4>
+              <p class="lang_step4_text">
                 Texturing models, create light, effects
               </p>
             </div>
 
             <div class="timeline__item">
-              <span class="timeline__item_number unselectable">05</span>
-              <img class="timeline__item_imageMain unselectable" src="./src/images/background/Site_5_1.png" alt="">
-              <img class="timeline__item_imageAdd unselectable" src="./src/images/background/Site_5_2.png" alt="">
-              <h3 class="h3_accentColor lang_step5 unselectable">Step 5</h3>
-              <h4 class="lang_step5_title unselectable">Final render</h5>
-                <p class="lang_step5_text unselectable">
+              <span class="timeline__item_number">05</span>
+              <img class="timeline__item_imageMain" src="./src/images/background/tl_item5_main.webp" alt="">
+              <img class="timeline__item_imageAdd" src="./src/images/background/tl_item5_add.webp" alt="">
+              <h3 class="h3_accentColor lang_step5">Step 5</h3>
+              <h4 class="lang_step5_title">Final render</h5>
+                <p class="lang_step5_text">
                   Rendering, post-processing, sound design
                 </p>
             </div>
