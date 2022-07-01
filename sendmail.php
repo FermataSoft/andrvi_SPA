@@ -19,7 +19,7 @@ $mail->addAddress('subneck@gmail.com');
 // Тема письма
 $mail->Subject = 'AndrVi Official Page [SubmitForm]';
 
-$body = 'Тестовый текст';
+$body = 'Данное письмо отправлено с сайта andrvi.com';
 
 if (trim(!empty($_POST['name']))) {
     $body .= '<p><strong>Имя:</strong> ' . $_POST['name'] . '</p>';
