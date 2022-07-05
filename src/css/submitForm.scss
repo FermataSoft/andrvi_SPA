@@ -172,6 +172,7 @@
 
       .termsAndConditionsBlock__label {
         display: inline-flex;
+        align-content: center;
 
         @include breakpoint(xs) {
           flex-wrap: wrap;

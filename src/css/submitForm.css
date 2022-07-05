@@ -194,6 +194,7 @@
 }
 .section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label {
   display: inline-flex;
+  align-content: center;
 }
 @media (max-width: 500px) {
   .section__submit .submitForm .submitForm__termsAndConditionsBlock .termsAndConditionsBlock__label {
