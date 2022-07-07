@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
   const $nav = document.querySelector('.navmenu__block');
   const $navmenu_items = document.querySelectorAll('.navmenu__menuBtn');
   const $body = document.querySelector('body');
-  
 
   $burgerBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     $burgerBtn.classList.toggle('_active');
     $nav.classList.toggle('_active');
     $body.classList.toggle('_locked');
@@ -15,9 +15,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   $navmenu_items.forEach((item) => {
     item.addEventListener('click', (e) => {
-      $burgerBtn.classList.toggle('_active');
-      $nav.classList.toggle('_active');
-      $body.classList.toggle('_locked');
+      e.stopPropagation();
+
+      if ($body.classList.contains('_locked')) {
+        $burgerBtn.classList.toggle('_active');
+        $nav.classList.toggle('_active');
+        $body.classList.toggle('_locked');
+      }
     });
   });
 });
