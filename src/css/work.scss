@@ -9,12 +9,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    @include breakpoint(sm) {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
     @include breakpoint(xs) {
       gap: 0;
       padding-top: 55px;
@@ -31,6 +25,26 @@
     font-weight: $font-medium;
     color: $white;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    svg {
+      width: 25px;
+      height: auto;
+
+      @include breakpoint(xs) {
+        width: 35px;
+        height: auto;
+      }
+    }
+
+    span {
+      @include breakpoint(xs) {
+        display: none;
+      }
+    }
 
     @include breakpoint(md) {
       font-size: 1.2rem;
@@ -41,6 +55,7 @@
     }
 
     @include breakpoint(xs) {
+      transition: none;
       font-size: 1rem;
     }
   }
@@ -62,6 +77,18 @@
     opacity: 1;
     transform: scale(0.93, 1);
     border-bottom: 3px solid $accent-blue;
+
+    @include breakpoint (xs) {
+      transform: scale(0.8, 1);
+    }
+  }
+
+  input:not(:checked) + label::before {
+    @include breakpoint(xs) {
+      opacity: 1;
+      transform: scale(1, 1);
+      border-bottom: 1px solid $white;
+    }
   }
 
   input:not(:checked) + label:hover::before {

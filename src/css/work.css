@@ -12,13 +12,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-@media (max-width: 630px) {
-  .section__work .work__tabs {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-}
 @media (max-width: 500px) {
   .section__work .work__tabs {
     gap: 0;
@@ -35,6 +28,25 @@
   font-weight: 500;
   color: #ffffff;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.section__work .work__tabs > label svg {
+  width: 25px;
+  height: auto;
+}
+@media (max-width: 500px) {
+  .section__work .work__tabs > label svg {
+    width: 35px;
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .section__work .work__tabs > label span {
+    display: none;
+  }
 }
 @media (max-width: 820px) {
   .section__work .work__tabs > label {
@@ -48,6 +60,7 @@
 }
 @media (max-width: 500px) {
   .section__work .work__tabs > label {
+    transition: none;
     font-size: 1rem;
   }
 }
@@ -67,6 +80,18 @@
   opacity: 1;
   transform: scale(0.93, 1);
   border-bottom: 3px solid #0d99ff;
+}
+@media (max-width: 500px) {
+  .section__work input:checked + label::before {
+    transform: scale(0.8, 1);
+  }
+}
+@media (max-width: 500px) {
+  .section__work input:not(:checked) + label::before {
+    opacity: 1;
+    transform: scale(1, 1);
+    border-bottom: 1px solid #ffffff;
+  }
 }
 .section__work input:not(:checked) + label:hover::before {
   opacity: 1;
